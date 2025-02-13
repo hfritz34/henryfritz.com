@@ -21,13 +21,13 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="hero">
         <h1>Hi, I'm Henry Fritz</h1>
-        <p className="hero-text">Software Engineer</p>
+        <p className="hero-text">Software Engineer | Student at The Ohio State University</p>
       </section>
 
       {/* About Section */}
       <section id="about" className="about">
         <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here.</p>
+        <p>Computer Science student at The Ohio State University, graduating May 2026. Currently in the University Honors Program. Passionate about software development with experience in cloud engineering, full-stack development, and teaching.</p>
       </section>
 
       {/* Projects Section */}
@@ -35,12 +35,18 @@ function App() {
         <h2>My Projects</h2>
         <div className="project-grid">
           <div className="project-card">
-            <h3>Project 1</h3>
-            <p>Project description goes here</p>
+            <h3>Prestige</h3>
+            <p>Music Social Network Platform with Spotify Integration</p>
+            <a href="https://github.com/hfritz34/Prestige" target="_blank" rel="noopener noreferrer">View Project</a>
           </div>
           <div className="project-card">
-            <h3>Project 2</h3>
-            <p>Project description goes here</p>
+            <h3>Neudesic Project</h3>
+            <p>Loan-amortization calculator project developed during internship</p>
+            <a href="https://github.com/hfritz34/neudesic-project" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>iOS Development</h3>
+            <p>Published multiple successful applications to the iOS App Store, generating 34,000+ organic impressions and 2,000+ downloads across 22 countries.</p>
           </div>
         </div>
       </section>
@@ -52,17 +58,25 @@ function App() {
           <div className="skill-category">
             <h3>Languages</h3>
             <ul>
-              <li>JavaScript</li>
               <li>Python</li>
-              {/* Add more skills */}
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>Swift</li>
+              <li>Java</li>
+              <li>C/C++</li>
+              <li>COBOL</li>
             </ul>
           </div>
           <div className="skill-category">
             <h3>Technologies</h3>
             <ul>
+              <li>Azure</li>
+              <li>AWS</li>
               <li>React</li>
               <li>Node.js</li>
-              {/* Add more technologies */}
+              <li>Flutter</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
             </ul>
           </div>
         </div>
@@ -72,10 +86,12 @@ function App() {
       <section id="contact" className="contact">
         <h2>Get In Touch</h2>
         <div className="contact-info">
-          <p>Email: your.email@example.com</p>
+          <p>Email: henryfritz02@gmail.com</p>
+          <p>Phone: (440) 773-6213</p>
+          <p>Location: Rocky River, Ohio</p>
           <div className="social-links">
-            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/henry-fritz-6049a3268/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/hfritz34" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </section>
