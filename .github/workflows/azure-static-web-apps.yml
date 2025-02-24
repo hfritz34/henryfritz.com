@@ -1,0 +1,3 @@
+app_location: "/" # Location of your source code
+output_location: "build" # Built app content directory
+app_build_command: "npm run build" # Build command 
