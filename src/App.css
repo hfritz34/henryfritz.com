@@ -17,28 +17,62 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  width: 100%;
 }
 
 .nav-brand {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
+  flex-direction: row;  /* Ensure horizontal layout */
   list-style: none;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
   color: #646cff;
+}
+
+/* Add responsive design for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+/* Add even more compact design for very small screens */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  
+  .nav-links {
+    margin-top: 0.5rem;
+  }
 }
 
 /* Sections */
