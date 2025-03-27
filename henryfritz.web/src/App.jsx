@@ -2,7 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import './components/About.css'
 import Navbar from './components/Navbar'
+import headshot from './assets/headshot.jpeg'
 
 function App() {
   return (
@@ -16,8 +18,15 @@ function App() {
 
       {/* About Section */}
       <section id="about" className="about">
-        <h2>About Me</h2>
-        <p>Computer Science student at The Ohio State University, graduating May 2026. Currently in the University Honors Program. Passionate about software development with experience in cloud engineering, full-stack development, and teaching.</p>
+        <div className="about-content">
+          <h2>About Me</h2>
+          <p>Computer Science student at The Ohio State University, graduating May 2026. Currently in the University Honors Program. Passionate about software development with experience in cloud engineering, full-stack development, and teaching.</p>
+          <p>I thrive on turning complex problems into elegant solutions and am constantly exploring new technologies to expand my skill set. My experience ranges from developing iOS applications to working with cloud platforms like Azure and AWS.</p>
+          <p>Outside of coding, I enjoy contributing to the tech community through teaching and mentoring, helping others discover their passion for software development.</p>
+        </div>
+        <div className="about-image">
+          <img src={headshot} alt="Henry Fritz" className="headshot" />
+        </div>
       </section>
 
       {/* Projects Section */}
