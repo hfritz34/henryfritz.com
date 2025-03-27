@@ -5,8 +5,17 @@ import './App.css'
 import './components/About.css'
 import './components/Skills.css'
 import './components/Resume.css'
+import './components/Projects.css'
 import Navbar from './components/Navbar'
+import Carousel from './components/Carousel'
 import headshot from './assets/headshot.jpeg'
+import studyMethodLogo from './assets/studymethod-logo.png'
+import worrdayLogo from './assets/worrday-logo.png'
+import prestigeImage1 from './assets/image1.png'
+import prestigeImage2 from './assets/image2.png'
+import prestigeImage3 from './assets/image3.png'
+import prestigeImage4 from './assets/image4.png'
+import neudesicLogo from './assets/neudesic-logo.png'
 
 function App() {
   return (
@@ -39,15 +48,35 @@ function App() {
             <h3>Prestige</h3>
             <p>Music Social Network Platform with Spotify Integration</p>
             <a href="https://github.com/hfritz34/Prestige" target="_blank" rel="noopener noreferrer">View Project</a>
+            <Carousel 
+              images={[prestigeImage1, prestigeImage2, prestigeImage3, prestigeImage4]} 
+            />
           </div>
           <div className="project-card">
             <h3>Neudesic Project</h3>
             <p>Loan-amortization calculator project developed during internship</p>
             <a href="https://github.com/hfritz34/neudesic-project" target="_blank" rel="noopener noreferrer">View Project</a>
+            <div className="project-logo">
+              <img src={neudesicLogo} alt="Neudesic Logo" className="company-logo" />
+            </div>
           </div>
           <div className="project-card">
             <h3>iOS Development</h3>
             <p>Published multiple successful applications to the iOS App Store, generating 34,000+ organic impressions and 2,000+ downloads across 22 countries.</p>
+            <div className="ios-apps">
+              <div className="app-card">
+                <a href="https://apps.apple.com/us/app/studymethod/id1589023481" target="_blank" rel="noopener noreferrer">
+                  <img src={studyMethodLogo} alt="StudyMethod App" className="app-logo" />
+                  <div className="app-name">StudyMethod</div>
+                </a>
+              </div>
+              <div className="app-card">
+                <a href="https://apps.apple.com/us/app/worrday/id6451059203" target="_blank" rel="noopener noreferrer">
+                  <img src={worrdayLogo} alt="Worrday App" className="app-logo" />
+                  <div className="app-name">Worrday</div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

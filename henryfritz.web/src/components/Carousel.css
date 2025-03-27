@@ -1,0 +1,139 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.carousel-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 35px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+.carousel-image.center {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+.carousel-image.left {
+  transform: translateX(-140px) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.carousel-image.right {
+  transform: translateX(140px) scale(0.8);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.carousel-image.back {
+  transform: translateX(0) scale(0.6);
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 4;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #646cff;
+  transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+  background: rgba(100, 108, 255, 0.5);
+}
+
+/* Add subtle cursor indicators */
+.carousel::before,
+.carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 4;
+}
+
+.carousel::before {
+  left: 0;
+  cursor: w-resize;
+}
+
+.carousel::after {
+  right: 0;
+  cursor: e-resize;
+} 
