@@ -31,7 +31,7 @@ function App() {
       <section id="about" className="about">
         <div className="about-content">
           <h2>About Me</h2>
-          <p>Computer Science student at The Ohio State University, graduating May 2026. Currently in the University Honors Program. Passionate about software development with experience in cloud engineering, full-stack development, and teaching.</p>
+          <p> I am a Computer Science student at The Ohio State University, graduating May 2026. Currently in the University Honors Program. Passionate about software development with experience in cloud engineering, full-stack development, and mobile development.</p>
           <p>I thrive on turning complex problems into elegant solutions and am constantly exploring new technologies to expand my skill set. My experience ranges from developing iOS applications to working with cloud platforms like Azure and AWS.</p>
           <p>Outside of coding, I enjoy contributing to the tech community through teaching and mentoring, helping others discover their passion for software development.</p>
         </div>
