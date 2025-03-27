@@ -2,8 +2,8 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
-      "/*.{png,jpg,gif,ico,svg,pdf}",
-      "/assets/*"
+      "/assets/*",
+      "/*.{ico,png,jpg,jpeg,gif,svg,js,css,map,pdf}"
     ]
   },
   "mimeTypes": {
@@ -11,11 +11,17 @@
     ".js": "text/javascript",
     ".css": "text/css",
     ".map": "application/json",
-    ".pdf": "application/pdf"
+    ".pdf": "application/pdf",
+    ".ico": "image/x-icon",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".gif": "image/gif",
+    ".svg": "image/svg+xml"
   },
   "globalHeaders": {
     "cache-control": "no-cache",
-    "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline';",
+    "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:;",
     "X-Content-Type-Options": "nosniff"
   },
   "routes": [
@@ -23,6 +29,12 @@
       "route": "/assets/*",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "route": "/resume.pdf",
+      "headers": {
+        "content-type": "application/pdf"
       }
     },
     {

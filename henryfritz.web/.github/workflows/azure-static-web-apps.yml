@@ -24,11 +24,14 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          cache-dependency-path: './henryfritz.web/package-lock.json'
 
       - name: Install Dependencies
+        working-directory: ./henryfritz.web
         run: npm ci
 
       - name: Build
+        working-directory: ./henryfritz.web
         run: npm run build
 
       - name: Build And Deploy
@@ -40,7 +43,7 @@ jobs:
           action: "upload"
           app_location: "./henryfritz.web" # App source code path
           api_location: "" # API source code path - leave empty if you don't have an API
-          output_location: "dist" # Built app content directory
+          output_location: "./henryfritz.web/dist" # Built app content directory - updated to reflect correct path
           skip_app_build: true # Skip build since we already built it
 
   close_pull_request_job:
