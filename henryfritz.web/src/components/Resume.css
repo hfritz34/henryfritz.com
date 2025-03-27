@@ -1,0 +1,29 @@
+.resume {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resume h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.resume-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .resume {
+    padding: 2rem 1rem;
+  }
+  
+  .resume-content {
+    padding: 1rem;
+  }
+} 

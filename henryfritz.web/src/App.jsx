@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import './components/About.css'
+import './components/Skills.css'
+import './components/Resume.css'
 import Navbar from './components/Navbar'
 import headshot from './assets/headshot.jpeg'
 
@@ -56,28 +58,74 @@ function App() {
         <div className="skills-grid">
           <div className="skill-category">
             <h3>Languages</h3>
-            <ul>
-              <li>Python</li>
-              <li>TypeScript</li>
-              <li>JavaScript</li>
-              <li>Swift</li>
-              <li>Java</li>
-              <li>C/C++</li>
-              <li>COBOL</li>
-            </ul>
+            <div className="skill-list">
+              <span className="skill-item">Python</span>
+              <span className="skill-item">TypeScript</span>
+              <span className="skill-item">JavaScript</span>
+              <span className="skill-item">Swift</span>
+              <span className="skill-item">Java</span>
+              <span className="skill-item">C</span>
+              <span className="skill-item">C++</span>
+              <span className="skill-item">Dart</span>
+              <span className="skill-item">COBOL</span>
+              <span className="skill-item">SQL</span>
+              <span className="skill-item">HTML</span>
+              <span className="skill-item">CSS</span>
+              <span className="skill-item">XML</span>
+              <span className="skill-item">Ruby</span>
+            </div>
           </div>
           <div className="skill-category">
-            <h3>Technologies</h3>
-            <ul>
-              <li>Azure</li>
-              <li>AWS</li>
-              <li>React</li>
-              <li>Node.js</li>
-              <li>Flutter</li>
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
-            </ul>
+            <h3>Developer Tools</h3>
+            <div className="skill-list">
+              <span className="skill-item">Azure</span>
+              <span className="skill-item">AWS</span>
+              <span className="skill-item">Git</span>
+              <span className="skill-item">Postman</span>
+              <span className="skill-item">Docker</span>
+              <span className="skill-item">Prisma</span>
+              <span className="skill-item">Jira</span>
+              <span className="skill-item">MongoDB</span>
+            </div>
           </div>
+          <div className="skill-category">
+            <h3>Libraries & Frameworks</h3>
+            <div className="skill-list">
+              <span className="skill-item">ReactJS</span>
+              <span className="skill-item">NextJS</span>
+              <span className="skill-item">NodeJS</span>
+              <span className="skill-item">Flutter</span>
+              <span className="skill-item">PostgreSQL</span>
+              <span className="skill-item">VueJS</span>
+              <span className="skill-item">Flask</span>
+              <span className="skill-item">AngularJS</span>
+              <span className="skill-item">ASP.NET</span>
+              <span className="skill-item">Express.js</span>
+              <span className="skill-item">Lynx</span>
+            </div>
+          </div>
+          <div className="skill-category">
+            <h3>Certifications</h3>
+            <div className="skill-list">
+              <span className="skill-item">Microsoft Azure Fundamentals</span>
+              <span className="skill-item">IBM Z Xplore Concepts</span>
+              <span className="skill-item">Academind Flutter & Dart</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resume Section */}
+      <section id="resume" className="resume">
+        <h2>Resume</h2>
+        <div className="resume-content">
+          <iframe 
+            src="/resume.pdf" 
+            title="Henry Fritz Resume" 
+            width="100%" 
+            height="800px" 
+            style={{ border: 'none', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}
+          />
         </div>
       </section>
 
@@ -89,7 +137,7 @@ function App() {
           <p>Phone: (440) 773-6213</p>
           <p>Location: Rocky River, Ohio</p>
           <div className="social-links">
-            <a href="https://www.linkedin.com/in/henry-fritz-6049a3268/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/henry-fritz-6049a3268/" target="_blank" rel="noopener noreferrer">LinkedIn </a>
             <a href="https://github.com/hfritz34" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
