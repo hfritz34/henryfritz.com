@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import '../styles/MyThings.css';
 import prestigeImage4 from '../assets/image4.png';
+import BeatVisualizer from './BeatVisualizer';
 
 const MyThings = () => {
   const [showPlayer, setShowPlayer] = useState(false);
+
+  // Handle player visibility toggle
+  const handlePlayerToggle = () => {
+    setShowPlayer(!showPlayer);
+  };
 
   // Hardcoded current listening data
   const currentlyListening = {
@@ -11,7 +17,8 @@ const MyThings = () => {
       name: "NO STRINGS",
       artist: "PARIS TEXAS",
       id: "12YBIhXmbERZmxBXAwfF6N",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b27333e996eeb0b81e56161dacbf" // Using the song's album artwork
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b27333e996eeb0b81e56161dacbf",
+      color: "#4ade80"
     },
     album: {
       name: "FLEX MUSIX",
@@ -38,7 +45,10 @@ const MyThings = () => {
             {/* Current Song with Player */}
             <div className="music-item">
               <h4>Song</h4>
-              <div className="music-image-container" onClick={() => setShowPlayer(!showPlayer)}>
+              <div 
+                className="music-image-container" 
+                onClick={handlePlayerToggle}
+              >
                 <img 
                   src={currentlyListening.song.imageUrl} 
                   alt={`${currentlyListening.song.name} by ${currentlyListening.song.artist}`}
@@ -54,7 +64,7 @@ const MyThings = () => {
               {showPlayer && (
                 <div className="spotify-player">
                   <iframe
-                    src={`https://open.spotify.com/embed/track/${currentlyListening.song.id}`}
+                    src={`https://open.spotify.com/embed/track/${currentlyListening.song.id}?enableApi=1`}
                     width="100%"
                     height="80"
                     frameBorder="0"
@@ -100,6 +110,8 @@ const MyThings = () => {
               </div>
             </a>
           </div>
+          
+          <BeatVisualizer color={currentlyListening.song.color} isPlaying={showPlayer} />
         </div>
 
         {/* What I'm Working On */}
@@ -126,4 +138,4 @@ const MyThings = () => {
   );
 };
 
-export default MyThings; 
+export default MyThings;

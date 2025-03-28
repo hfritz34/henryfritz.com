@@ -1,15 +1,31 @@
+/* Update the my-things container alignment */
 .my-things {
   padding: 4rem 2rem;
   background-color: #1a1a1a;
   color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Add box-sizing to all elements to ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
+
+.my-things h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 .things-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  width: 100%;
 }
 
 .listening-section,
@@ -18,18 +34,31 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Change the heading alignment to left instead of center */
+.listening-section h3,
+.working-section h3 {
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .music-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .music-item {
   background: #1a1a1a;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
   transition: transform 0.2s ease;
   text-decoration: none;
@@ -39,6 +68,7 @@
   align-items: center;
   text-align: center;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .music-item:hover {
@@ -62,14 +92,14 @@
 .music-image-container {
   position: relative;
   cursor: pointer;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   margin: 0;
 }
 
 .music-item img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -78,7 +108,7 @@
 .music-info {
   width: 100%;
   margin-top: 1rem;
-  min-height: 3.5rem; /* Space for title + artist name */
+  min-height: 3.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,13 +213,14 @@
   background-color: #535bf2;
 }
 
-.loading {
-  text-align: center;
-  padding: 2rem;
-  color: #ccc;
-  font-style: italic;
+/* Beat Visualizer alignment */
+.beat-visualizer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
+/* Responsive styles */
 @media (max-width: 1024px) {
   .music-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -216,4 +247,4 @@
     width: 100%;
     max-width: 250px;
   }
-} 
+}
