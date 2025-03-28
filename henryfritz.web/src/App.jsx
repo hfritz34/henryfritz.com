@@ -149,15 +149,15 @@ function App() {
       <section id="resume" className="resume">
         <h2>Resume</h2>
         <div className="resume-content">
-          <iframe 
-            src="/resume.pdf" 
-            title="Henry Fritz Resume" 
-            width="100%" 
-            height="800px" 
-            style={{ border: 'none', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}
+          <object
+            data="/resume.pdf"
             type="application/pdf"
-            allow="fullscreen"
-          />
+            width="100%"
+            height="800px"
+            style={{ border: 'none', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}
+          >
+            <p>Unable to display PDF file. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download</a> instead.</p>
+          </object>
         </div>
       </section>
 
