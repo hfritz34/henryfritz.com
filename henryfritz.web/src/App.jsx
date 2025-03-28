@@ -53,7 +53,7 @@ function App() {
             />
           </div>
           <div className="project-card">
-            <h3>Neudesic Project</h3>
+            <h3>Loan-amortization calculator</h3>
             <p>Loan-amortization calculator project developed during internship</p>
             <a href="https://github.com/hfritz34/neudesic-project" target="_blank" rel="noopener noreferrer">View Project</a>
             <div className="project-logo">
