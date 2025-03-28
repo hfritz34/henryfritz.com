@@ -21,10 +21,15 @@
   },
   "globalHeaders": {
     "cache-control": "no-cache",
-    "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:;",
+    "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https://open.spotify.com https://accounts.spotify.com; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:; frame-src https://open.spotify.com;",
     "X-Content-Type-Options": "nosniff"
   },
   "routes": [
+    {
+      "route": "/callback",
+      "serve": "/index.html",
+      "statusCode": 200
+    },
     {
       "route": "/assets/*",
       "headers": {

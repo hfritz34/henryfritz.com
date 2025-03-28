@@ -8,6 +8,7 @@ import './styles/Resume.css'
 import './styles/Projects.css'
 import Navbar from './components/Navbar'
 import Carousel from './components/Carousel'
+import MyThings from './components/MyThings'
 import headshot from './assets/headshot.jpeg'
 import studyMethodLogo from './assets/studymethod-logo.png'
 import worrdayLogo from './assets/worrday-logo.png'
@@ -157,6 +158,9 @@ function App() {
           />
         </div>
       </section>
+
+      {/* My Things Section */}
+      <MyThings />
 
       {/* Contact Section */}
       <section id="contact" className="contact">
