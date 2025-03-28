@@ -3,7 +3,7 @@
     "rewrite": "/index.html",
     "exclude": [
       "/assets/*",
-      "/*.{ico,png,jpg,jpeg,gif,svg,js,css,map,pdf}"
+      "/*.{ico,png,jpg,jpeg,gif,svg,js,css,map}"
     ]
   },
   "mimeTypes": {
@@ -39,7 +39,9 @@
     {
       "route": "/resume.pdf",
       "headers": {
-        "content-type": "application/pdf"
+        "content-type": "application/pdf",
+        "cache-control": "public, max-age=3600",
+        "X-Content-Type-Options": "nosniff"
       }
     },
     {

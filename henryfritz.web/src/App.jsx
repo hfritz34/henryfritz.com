@@ -155,6 +155,8 @@ function App() {
             width="100%" 
             height="800px" 
             style={{ border: 'none', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}
+            type="application/pdf"
+            allow="fullscreen"
           />
         </div>
       </section>
