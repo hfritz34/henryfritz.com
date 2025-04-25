@@ -14,17 +14,17 @@ const MyThings = () => {
   // Hardcoded current listening data
   const currentlyListening = {
     song: {
-      name: "NO STRINGS",
-      artist: "PARIS TEXAS",
-      id: "12YBIhXmbERZmxBXAwfF6N",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b27333e996eeb0b81e56161dacbf",
+      name: "TONY ON THE RADIO",
+      artist: "Igwe Aka",
+      id: "0nmJuIGEzy8Exr9uF10jvx",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b27343d7eb7b6016d78e90e5f58d",
       color: "#4ade80"
     },
     album: {
-      name: "FLEX MUSIX",
-      artist: "Osamason",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b2735331adabe62a482b2daebed6",
-      spotifyUrl: "https://open.spotify.com/album/075lV4wdtLwFvIvCUdSYhL"
+      name: "Jump Out",
+      artist: "OsamaSon",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b273b2ea42b7a47a6b58ca111fee",
+      spotifyUrl: "https://open.spotify.com/album/5Vb4K4Xf4KPFupmhHi5COM"
     },
     artist: {
       name: "Paris Texas",
