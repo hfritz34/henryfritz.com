@@ -64,5 +64,18 @@
 
   .nav-links {
     gap: 1rem; /* Reduce gap between links on mobile */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping */
+    /* Optional: Add some padding so items don't touch edges when scrolled */
+    /* padding: 0 0.5rem; */ 
+    
+    /* Hide scrollbar (optional, browser-specific) */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 } 
