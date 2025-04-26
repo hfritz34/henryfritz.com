@@ -19,6 +19,7 @@ import prestigeImage4 from './assets/image4.png'
 import neudesicLogo from './assets/neudesic-logo.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
+import ResumeViewer from './components/ResumeViewer'; // Import the new component
 
 function App() {
   // Initialize AOS
@@ -159,15 +160,10 @@ function App() {
       <section id="resume" className="resume" data-aos="fade-up">
         <h2 data-aos="fade-up">Resume</h2>
         <div className="resume-content" data-aos="zoom-in" data-aos-delay="100">
-          <object
-            data="/resume.pdf"
-            type="application/pdf"
-            width="100%"
-            height="800px"
-            style={{ border: 'none', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}
-          >
-            <p>Unable to display PDF file. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download</a> instead.</p>
-          </object>
+          <ResumeViewer fileUrl="/resume.pdf" />
+          <p style={{ textAlign: 'center', marginTop: '1rem' }}>
+            Having trouble viewing? <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#64B5F6'}}>Download PDF</a>
+          </p>
         </div>
       </section>
 

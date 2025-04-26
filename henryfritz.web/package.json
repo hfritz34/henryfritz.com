@@ -4,17 +4,21 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "npm run copy-pdf-worker && vite",
+    "build": "npm run copy-pdf-worker && vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "copy-pdf-worker": "mkdir -p public/pdf && cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/pdf/"
   },
   "dependencies": {
     "@azure/functions": "^4.7.0",
+    "aos": "^2.3.4",
     "audiomotion-analyzer": "^4.5.0",
     "axios": "^1.8.4",
+    "pdfjs-dist": "^4.8.69",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pdf": "^9.2.1",
     "react-router-dom": "^7.4.0",
     "spotify-web-api-js": "^1.5.2"
   },

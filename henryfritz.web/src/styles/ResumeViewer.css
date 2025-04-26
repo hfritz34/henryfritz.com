@@ -1,0 +1,29 @@
+.resume-viewer-container {
+  width: 100%;
+  max-width: 800px; /* Limit max width on desktop */
+  margin: 0 auto; /* Center the container */
+  overflow: hidden; /* Hide overflow from container */
+  border-radius: 10px; /* Match original styling */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match original styling */
+}
+
+.resume-document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto; /* Enable scrolling for the document */
+  width: 100%;
+  max-height: 80vh; /* Limit height to allow page scrolling */
+  -webkit-overflow-scrolling: touch; /* Improve scroll feel on iOS */
+}
+
+.resume-page {
+  margin-bottom: 1rem; /* Space between pages */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for pages */
+}
+
+/* Ensure canvas scales correctly */
+.resume-page canvas {
+  max-width: 100%;
+  height: auto !important; 
+} 
