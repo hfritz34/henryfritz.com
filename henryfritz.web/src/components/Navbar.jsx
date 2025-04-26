@@ -1,10 +1,13 @@
 import React from 'react';
+import Logo from './Logo';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="nav-brand">Henry Fritz</div>
+      <a href="#home" className="navbar-logo-link">
+        <Logo width={50} height={50} />
+      </a>
       <ul className="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>

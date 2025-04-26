@@ -2,13 +2,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   background-color: #1a1a1a;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+}
+
+.navbar-logo-link img {
+  display: block;
+  max-height: 100%;
+  width: auto;
 }
 
 .nav-brand {
@@ -19,10 +34,12 @@
 
 .nav-links {
   display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 2rem;
+  height: 100%;
 }
 
 .nav-links li a {
