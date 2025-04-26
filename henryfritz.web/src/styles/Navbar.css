@@ -50,4 +50,19 @@
 
 .nav-links li a:hover {
   color: #646cff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem; /* Reduce horizontal padding on mobile */
+  }
+
+  .navbar-logo-link {
+    margin-right: 1.5rem; /* Add space between logo and links on mobile */
+  }
+
+  .nav-links {
+    gap: 1rem; /* Reduce gap between links on mobile */
+  }
 } 
