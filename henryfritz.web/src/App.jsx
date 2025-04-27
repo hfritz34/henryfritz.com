@@ -176,7 +176,6 @@ function App() {
         <div className="contact-info" data-aos="fade-up" data-aos-delay="100">
           <p>Email: henryfritz02@gmail.com</p>
           <p>Phone: (440) 773-6213</p>
-          <p>Location: Rocky River, Ohio</p>
           <div className="social-links" data-aos="fade-up" data-aos-delay="200">
             <a href="https://www.linkedin.com/in/henry-fritz-6049a3268/" target="_blank" rel="noopener noreferrer">LinkedIn </a>
             <a href="https://github.com/hfritz34" target="_blank" rel="noopener noreferrer">GitHub</a>
