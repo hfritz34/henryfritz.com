@@ -21,10 +21,10 @@ const MyThings = () => {
       color: "#4CAF50"
     },
     album: {
-      name: "Jump Out",
-      artist: "OsamaSon",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b273b2ea42b7a47a6b58ca111fee",
-      spotifyUrl: "https://open.spotify.com/album/5Vb4K4Xf4KPFupmhHi5COM"
+      name: "Untrue",
+      artist: "Burial",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b27355018696782c175bdbaa3b5d",
+      spotifyUrl: "https://open.spotify.com/album/1iRPiEYHIX2zpF8lkW54SK"
     },
     artist: {
       name: "Paris Texas",
