@@ -14,11 +14,11 @@ const MyThings = () => {
   // Hardcoded current listening data
   const currentlyListening = {
     song: {
-      name: "TONY ON THE RADIO",
-      artist: "Igwe Aka",
-      id: "0nmJuIGEzy8Exr9uF10jvx",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b27343d7eb7b6016d78e90e5f58d",
-      color: "#4ade80"
+      name: "Ageispolis",
+      artist: "Aphex Twin",
+      id: "7KRQoq9GeWeCm0ZAXg5XMb",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b27338906032688bb13b135ce19a",
+      color: "#4CAF50"
     },
     album: {
       name: "Jump Out",
