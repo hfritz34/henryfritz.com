@@ -22,6 +22,7 @@ const AnimatedText = () => {
         repeat={Infinity}
         className="animated-text"
         cursor={true}
+        style={{ display: 'inline-block' }}
       />
       <h1 className="name-text">Henry Fritz</h1>
     </div>
