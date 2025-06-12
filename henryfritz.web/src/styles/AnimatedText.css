@@ -12,6 +12,12 @@
   width: 100%;
 }
 
+.text-with-cursor {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
 .animated-text {
   background: linear-gradient(
     90deg,
@@ -27,6 +33,15 @@
   position: relative;
 }
 
+.custom-cursor {
+  color: #60A5FA;
+  font-weight: 400;
+  font-size: 1em;
+  margin-left: 2px;
+  display: inline-block;
+  animation: blink-cursor 1s infinite;
+}
+
 .name-text {
   font-size: 4.5rem;
   font-weight: 800;
@@ -40,7 +55,7 @@
 .hero-text {
   color: #a0a0a0;
   font-size: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-weight: 400;
 }
 
@@ -68,29 +83,29 @@
   }
 }
 
+@keyframes blink-cursor {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .animated-text {
   background-size: 200% auto;
   animation: gradient 8s ease infinite;
 }
 
-/* Style the cursor from react-type-animation */
-.animated-text::after {
-  content: '|';
-  display: inline-block;
-  margin-left: 4px;
-  font-weight: 400;
-  font-size: 1em;
-  color: #60A5FA;
-  animation: blink 1s step-end infinite;
-  position: relative;
-  top: -0.05em;
+/* Style the TypeAnimation cursor - multiple selectors to catch different implementations */
+.animated-text .cursor,
+.animated-text::after,
+.animated-text > .cursor,
+span[class*="cursor"] {
+  color: #60A5FA !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
 }
 
-@keyframes blink {
-  from, to {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+/* Alternative approach - target any element that might be the cursor */
+.animated-text-container [class*="cursor"],
+.animated-text-container [data-cursor="true"] {
+  color: #60A5FA !important;
 } 
