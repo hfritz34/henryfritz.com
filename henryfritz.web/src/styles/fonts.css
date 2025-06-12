@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://api.fontshare.com/v2/fonts/satoshi/woff2') format('woff2'),
+       url('https://api.fontshare.com/v2/fonts/satoshi/woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://api.fontshare.com/v2/fonts/satoshi/woff2') format('woff2'),
+       url('https://api.fontshare.com/v2/fonts/satoshi/woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+} 

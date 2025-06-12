@@ -1,0 +1,101 @@
+.animated-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 4rem 0 1rem 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.animated-text {
+  background: linear-gradient(
+    90deg,
+    #FF6B6B 0%,
+    #4ECDC4 50%,
+    #45B7D1 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  min-height: 4rem;
+  position: relative;
+}
+
+.name-text {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+  animation-delay: 1s;
+}
+
+.hero-text {
+  color: #a0a0a0;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+/* Add a subtle animation to the gradient */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-text {
+  background-size: 200% auto;
+  animation: gradient 8s ease infinite;
+}
+
+/* Custom cursor styling */
+.animated-text::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  background: linear-gradient(
+    90deg,
+    #FF6B6B 0%,
+    #4ECDC4 50%,
+    #45B7D1 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blink 1s step-end infinite, gradient 8s ease infinite;
+  background-size: 200% auto;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+} 
