@@ -17,47 +17,34 @@ import prestigeImage2 from './assets/image2.png'
 import prestigeImage3 from './assets/image3.png'
 import prestigeImage4 from './assets/image4.png'
 import neudesicLogo from './assets/neudesic-logo.png'
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
 import ResumeViewer from './components/ResumeViewer'; // Import the new component
 import AnimatedText from './components/AnimatedText';
+import HeroV2 from './components/HeroV2';
 
 function App() {
-  // Initialize AOS
-  useEffect(() => {
-    AOS.init({ 
-      duration: 1000, // Animation duration in ms
-      once: true, // Whether animation should happen only once
-    });
-  }, []);
-
   return (
     <>
       <Navbar />
       <div className="app">
-        <header className="hero">
-          <AnimatedText />
-          <p className="hero-text">Software Engineer | Student at The Ohio State University</p>
-        </header>
-
+        <HeroV2 />
         {/* About Section */}
-        <section id="about" className="about" data-aos="fade-up">
-          <div className="about-content" data-aos="fade-right" data-aos-delay="200">
+        <section id="about" className="about">
+          <div className="about-content">
             <h2>About Me</h2>
             <p> I am a Computer Science student at The Ohio State University, graduating May 2026. Currently in the University Honors Program. Passionate about software development with experience in cloud engineering, full-stack development, and mobile development.</p>
             <p>I thrive on turning complex problems into elegant solutions and am constantly exploring new technologies to expand my skill set. My experience ranges from developing iOS applications to working with cloud platforms like Azure and AWS.</p>
             <p>Outside of coding, I enjoy contributing to the tech community through teaching and mentoring, helping others discover their passion for software development.</p>
           </div>
-          <div className="about-image" data-aos="fade-left" data-aos-delay="400">
+          <div className="about-image">
             <img src={headshot} alt="Henry Fritz" className="headshot" />
           </div>
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="projects" data-aos="fade-up">
-          <h2 data-aos="fade-up">My Projects</h2>
+        <section id="projects" className="projects">
+          <h2>My Projects</h2>
           <div className="project-grid">
-            <div className="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div className="project-card">
               <h3>Prestige</h3>
               <p>Music Social Network Platform with Spotify Integration</p>
               <a href="https://github.com/hfritz34/Prestige" target="_blank" rel="noopener noreferrer">View Project</a>
@@ -65,7 +52,7 @@ function App() {
                 images={[prestigeImage1, prestigeImage2, prestigeImage3, prestigeImage4]} 
               />
             </div>
-            <div className="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div className="project-card">
               <h3>Loan-amortization calculator</h3>
               <p>Loan-amortization calculator project developed during internship</p>
               <a href="https://github.com/hfritz34/neudesic-project" target="_blank" rel="noopener noreferrer">View Project</a>
@@ -73,7 +60,7 @@ function App() {
                 <img src={neudesicLogo} alt="Neudesic Logo" className="company-logo" />
               </div>
             </div>
-            <div className="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div className="project-card">
               <h3>iOS Development</h3>
               <p>Published multiple successful applications to the iOS App Store, generating 34,000+ organic impressions and 2,000+ downloads across 22 countries.</p>
               <div className="ios-apps">
@@ -95,10 +82,10 @@ function App() {
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="skills" data-aos="fade-up">
-          <h2 data-aos="fade-up">Skills</h2>
+        <section id="skills" className="skills">
+          <h2>Skills</h2>
           <div className="skills-grid">
-            <div className="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <div className="skill-category">
               <h3>Languages</h3>
               <div className="skill-list">
                 <span className="skill-item">Python</span>
@@ -117,7 +104,7 @@ function App() {
                 <span className="skill-item">Ruby</span>
               </div>
             </div>
-            <div className="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <div className="skill-category">
               <h3>Developer Tools</h3>
               <div className="skill-list">
                 <span className="skill-item">Azure</span>
@@ -130,7 +117,7 @@ function App() {
                 <span className="skill-item">MongoDB</span>
               </div>
             </div>
-            <div className="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <div className="skill-category">
               <h3>Libraries & Frameworks</h3>
               <div className="skill-list">
                 <span className="skill-item">ReactJS</span>
@@ -146,7 +133,7 @@ function App() {
                 <span className="skill-item">Lynx</span>
               </div>
             </div>
-            <div className="skill-category" data-aos="fade-up" data-aos-delay="400">
+            <div className="skill-category">
               <h3>Certifications</h3>
               <div className="skill-list">
                 <span className="skill-item">Microsoft Azure Fundamentals</span>
@@ -158,9 +145,9 @@ function App() {
         </section>
 
         {/* Resume Section */}
-        <section id="resume" className="resume" data-aos="fade-up">
-          <h2 data-aos="fade-up">Resume</h2>
-          <div className="resume-content" data-aos="zoom-in" data-aos-delay="100">
+        <section id="resume" className="resume">
+          <h2>Resume</h2>
+          <div className="resume-content">
             <ResumeViewer fileUrl="/resume.pdf" />
             <p style={{ textAlign: 'center', marginTop: '1rem' }}>
               Having trouble viewing? <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#64B5F6'}}>Download PDF</a>
@@ -169,22 +156,22 @@ function App() {
         </section>
 
         {/* My Things Section */}
-        <MyThings data-aos="fade-up" />
+        <MyThings />
 
         {/* Contact Section */}
-        <section id="contact" className="contact" data-aos="fade-up">
-          <h2 data-aos="fade-up">Get In Touch</h2>
-          <div className="contact-info" data-aos="fade-up" data-aos-delay="100">
+        <section id="contact" className="contact">
+          <h2>Get In Touch</h2>
+          <div className="contact-info">
             <p>Email: henryfritz02@gmail.com</p>
             <p>Phone: (440) 773-6213</p>
-            <div className="social-links" data-aos="fade-up" data-aos-delay="200">
+            <div className="social-links">
               <a href="https://www.linkedin.com/in/henry-fritz-6049a3268/" target="_blank" rel="noopener noreferrer">LinkedIn </a>
               <a href="https://github.com/hfritz34" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </section>
 
-        <footer data-aos="fade-up">
+        <footer>
           <p>&copy; 2024 Henry Fritz. All rights reserved.</p>
         </footer>
       </div>

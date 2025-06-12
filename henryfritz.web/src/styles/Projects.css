@@ -1,9 +1,22 @@
 .projects {
   padding: 4rem 2rem;
   max-width: 1200px;
-  margin: 0 auto;
-  background-color: #1a1a1a;
+  margin: 2rem auto;
+  background-color: transparent;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1), transparent);
+  border-radius: 20px;
   color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects:hover {
+  transform: translateY(-4px);
+  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.4), rgba(37, 99, 235, 0.2), transparent);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.05);
 }
 
 .projects h2 {
@@ -11,6 +24,14 @@
   text-align: center;
   font-size: 2.5rem;
   color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.projects h2:hover {
+  transform: translateY(-2px);
+  color: #60A5FA;
 }
 
 .project-grid {
@@ -18,47 +39,114 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .project-card {
-  background: #2d2d2d;
+  background: rgba(13, 17, 23, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   min-height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  transform: rotate(0deg);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+  animation: rotate-glow 5s linear infinite;
+}
+
+@keyframes rotate-glow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  background: #333;
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .project-card h3 {
   margin-bottom: 1rem;
   color: #fff;
   font-size: 1.5rem;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover h3 {
+  color: #60A5FA;
 }
 
 .project-card p {
   color: #ccc;
   margin-bottom: 1rem;
   line-height: 1.6;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover p {
+  color: #e0e0e0;
 }
 
 .project-card a {
-  color: #646cff;
+  color: #60A5FA;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   margin-bottom: 2rem;
   display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #60A5FA, #3B82F6);
+  transition: width 0.3s ease;
+}
+
+.project-card a:hover::after {
+  width: 100%;
 }
 
 .project-card a:hover {
-  color: #535bf2;
+  color: #3B82F6;
+  transform: translateX(4px);
 }
 
 .project-content {
@@ -80,11 +168,13 @@
 
 .app-card {
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 15px;
+  padding: 1rem;
 }
 
 .app-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.05);
 }
 
 .app-logo {
@@ -92,13 +182,24 @@
   height: 120px;
   border-radius: 22px;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-card:hover .app-logo {
+  box-shadow: 0 16px 48px rgba(59, 130, 246, 0.2);
+  transform: scale(1.1);
 }
 
 .app-name {
   font-size: 1.1rem;
   color: #fff;
   margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.app-card:hover .app-name {
+  color: #60A5FA;
 }
 
 .project-logo {
@@ -114,12 +215,15 @@
   object-fit: contain;
   border-radius: 35px;
   padding: 1rem;
-  background: #2d2d2d;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-logo:hover {
-  transform: scale(1.05);
-  background: #333;
+  transform: scale(1.08);
+  border-color: none;
+  box-shadow: none;
 } 

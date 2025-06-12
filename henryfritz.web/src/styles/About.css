@@ -1,47 +1,77 @@
 .about {
   padding: 4rem 2rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: flex;
   gap: 3rem;
   align-items: center;
+  background-color: transparent;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1), transparent);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about:hover {
+  transform: translateY(-4px);
+  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.4), rgba(37, 99, 235, 0.2), transparent);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.05);
 }
 
 .about-content {
   flex: 1;
   text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
 .about-image {
   flex: 1;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .headshot {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
 }
 
 .headshot:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .about h2 {
   margin-bottom: 1.5rem;
   font-size: 2.5rem;
-  color: #333;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.about:hover h2 {
+  color: #60A5FA;
 }
 
 .about p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #666;
+  color: #ccc;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.about:hover p {
+  color: #e0e0e0;
 }
 
 @media (max-width: 768px) {
