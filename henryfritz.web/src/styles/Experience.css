@@ -1,0 +1,38 @@
+/* src/styles/Experience.css */
+
+.experience {
+  padding: 1rem 2rem 4rem 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: transparent;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1), transparent);
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.experience h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo-grid img {
+  height: 80px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logo-grid img:hover {
+  opacity: 1;
+} 

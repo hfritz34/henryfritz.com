@@ -10,6 +10,9 @@ import Navbar from './components/Navbar'
 import Carousel from './components/Carousel'
 import MyThings from './components/MyThings'
 import headshot from './assets/headshot.jpeg'
+import henryJpg from './assets/adventure.jpg'
+import thewaterJpeg from './assets/thewater.jpeg'
+import vinlandJpeg from './assets/vinland.jpeg'
 import studyMethodLogo from './assets/studymethod-logo.png'
 import worrdayLogo from './assets/worrday-logo.png'
 import prestigeImage1 from './assets/image1.png'
@@ -17,11 +20,20 @@ import prestigeImage2 from './assets/image2.png'
 import prestigeImage3 from './assets/image3.png'
 import prestigeImage4 from './assets/image4.png'
 import neudesicLogo from './assets/neudesic-logo.png'
+import alphabetLogo from './assets/alphabetlogo.png'
 import ResumeViewer from './components/ResumeViewer'; // Import the new component
 import AnimatedText from './components/AnimatedText';
 import HeroV2 from './components/HeroV2';
+import PhotoGallery from './components/PhotoGallery';
+import Experience from './components/Experience';
 
 function App() {
+  const galleryImages = [
+    { src: henryJpg, alt: 'Henry Fritz', orientation: 'vertical' },
+    { src: thewaterJpeg, alt: 'Water', orientation: 'horizontal' },
+    { src: vinlandJpeg, alt: 'Vinland', orientation: 'horizontal' },
+  ];
+
   return (
     <>
       <Navbar />
@@ -40,10 +52,20 @@ function App() {
           </div>
         </section>
 
+        <Experience />
+
         {/* Projects Section */}
         <section id="projects" className="projects">
           <h2>My Projects</h2>
           <div className="project-grid">
+            <div className="project-card">
+              <h3>AlphaBet</h3>
+              <p>Building a new way to bet on sports with friends</p>
+              <a href="https://joinalphabet.com/" target="_blank" rel="noopener noreferrer">View Project</a>
+              <div className="project-logo">
+                <img src={alphabetLogo} alt="AlphaBet Logo" className="company-logo" />
+              </div>
+            </div>
             <div className="project-card">
               <h3>Prestige</h3>
               <p>Music Social Network Platform with Spotify Integration</p>
@@ -51,14 +73,6 @@ function App() {
               <Carousel 
                 images={[prestigeImage1, prestigeImage2, prestigeImage3, prestigeImage4]} 
               />
-            </div>
-            <div className="project-card">
-              <h3>Loan-amortization calculator</h3>
-              <p>Loan-amortization calculator project developed during internship</p>
-              <a href="https://github.com/hfritz34/neudesic-project" target="_blank" rel="noopener noreferrer">View Project</a>
-              <div className="project-logo">
-                <img src={neudesicLogo} alt="Neudesic Logo" className="company-logo" />
-              </div>
             </div>
             <div className="project-card">
               <h3>iOS Development</h3>
@@ -156,6 +170,8 @@ function App() {
 
         {/* My Things Section */}
         <MyThings />
+
+        <PhotoGallery images={galleryImages} />
 
         {/* Contact Section */}
         <section id="contact" className="contact">
