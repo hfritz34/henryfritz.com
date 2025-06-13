@@ -130,7 +130,6 @@ function App() {
                 <span className="skill-item">AngularJS</span>
                 <span className="skill-item">ASP.NET</span>
                 <span className="skill-item">Express.js</span>
-                <span className="skill-item">Lynx</span>
               </div>
             </div>
             <div className="skill-category">

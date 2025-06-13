@@ -7,7 +7,10 @@ const HeroV2 = () => {
     <section className="hero-v2">
       <div className="hero-v2-container">
         <div className="hero-v2-grid">
-          {/* Grid lines will be generated using CSS */}
+          <div className="bullet-h" style={{ top: '20%', animationDelay: '0s' }}></div>
+          <div className="bullet-h" style={{ top: '65%', animationDelay: '3s' }}></div>
+          <div className="bullet-v" style={{ left: '30%', animationDelay: '1.5s' }}></div>
+          <div className="bullet-v" style={{ left: '70%', animationDelay: '4.5s' }}></div>
         </div>
         <div className="hero-v2-content">
           <AnimatedText />
