@@ -37,6 +37,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <div id="home"></div>
       <div className="app">
         <HeroV2 />
         {/* About Section */}

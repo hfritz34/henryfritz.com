@@ -82,6 +82,7 @@
   list-style: none;
   position: relative;
   z-index: 1;
+  justify-content: center;
 }
 
 .skill-item {
@@ -124,9 +125,5 @@
 @media (max-width: 768px) {
   .skills {
     padding: 2rem 1rem;
-  }
-  
-  .skill-list {
-    justify-content: center;
   }
 } 
