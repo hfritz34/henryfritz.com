@@ -7,6 +7,7 @@ const PhotoGallery = ({ images }) => {
 
   return (
     <section className="photo-gallery">
+      <h2>Scenery</h2>
       <div className="photo-gallery-grid">
         {verticalImage && (
           <div className="photo-container vertical">

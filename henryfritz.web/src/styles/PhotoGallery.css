@@ -15,6 +15,27 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.photo-gallery:hover {
+  transform: translateY(-4px);
+  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.4), rgba(37, 99, 235, 0.2), transparent);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.05);
+}
+
+.photo-gallery h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.photo-gallery h2:hover {
+  transform: translateY(-2px);
+  color: #60A5FA;
+}
+
 .photo-gallery-grid {
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -24,6 +45,8 @@
   justify-content: center;
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .photo-container.vertical {
@@ -53,7 +76,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: none;
 }
 
 .photo-container.vertical .gallery-photo {
@@ -62,8 +85,4 @@
 
 .photo-container.horizontal .gallery-photo {
   object-position: center center;
-}
-
-.photo-container:hover .gallery-photo {
-  transform: scale(1.1);
 } 

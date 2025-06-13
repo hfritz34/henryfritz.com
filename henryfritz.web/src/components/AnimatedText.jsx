@@ -14,7 +14,7 @@ const AnimatedText = () => {
             2000,
             'Hi, I\'m an Architect.',
             2000,
-            'Hi, I\'m a Builder.',
+            'Hi, I\'m a Problem-Solver.',
             2000,
             'Hi, I\'m a Creative.',
             2000,
