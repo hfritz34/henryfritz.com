@@ -37,9 +37,9 @@
   color: #60A5FA;
   font-weight: 400;
   font-size: 1em;
-  margin-left: 2px;
+  margin-left: 4px;
   display: inline-block;
-  animation: cursor-blink 1s infinite step-start;
+  animation: cursor-blink 1s infinite;
 }
 
 .name-text {
@@ -84,11 +84,11 @@
 }
 
 @keyframes cursor-blink {
-  0%, 50% { 
-    opacity: 1; 
+  0%, 50% {
+    opacity: 1;
   }
-  51%, 100% { 
-    opacity: 0; 
+  51%, 100% {
+    opacity: 0;
   }
 }
 
@@ -100,11 +100,9 @@
 /* Style the TypeAnimation cursor - multiple selectors to catch different implementations */
 .animated-text .cursor,
 .animated-text::after,
-.animated-text > .cursor,
-span[class*="cursor"] {
+.animated-text > .cursor {
   color: #60A5FA !important;
   font-weight: 400 !important;
-  opacity: 1 !important;
 }
 
 /* Alternative approach - target any element that might be the cursor */

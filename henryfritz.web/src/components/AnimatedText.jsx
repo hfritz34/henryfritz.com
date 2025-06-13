@@ -10,13 +10,13 @@ const AnimatedText = () => {
           sequence={[
             'Hi, I\'m',
             1000,
-            'Hi, I\'m a Developer',
+            'Hi, I\'m a Developer.',
             2000,
-            'Hi, I\'m an Architect',
+            'Hi, I\'m an Architect.',
             2000,
-            'Hi, I\'m a Builder',
+            'Hi, I\'m a Builder.',
             2000,
-            'Hi, I\'m a Creative',
+            'Hi, I\'m a Creative.',
             2000,
           ]}
           wrapper="span"

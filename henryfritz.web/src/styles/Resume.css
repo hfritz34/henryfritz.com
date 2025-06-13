@@ -18,6 +18,24 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.resume-download-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.resume-download-link a {
+  color: #64B5F6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.resume-download-link a:hover {
+  color: #3B82F6;
+}
+
 @media (max-width: 768px) {
   .resume {
     padding: 2rem 1rem;

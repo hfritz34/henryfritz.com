@@ -162,9 +162,9 @@ function App() {
           <h2>Resume</h2>
           <div className="resume-content">
             <ResumeViewer fileUrl="/resume.pdf" />
-            <p style={{ textAlign: 'center', marginTop: '1rem' }}>
-              Having trouble viewing? <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#64B5F6'}}>Download PDF</a>
-            </p>
+            <div className="resume-download-link">
+              Having trouble viewing? <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+            </div>
           </div>
         </section>
 
