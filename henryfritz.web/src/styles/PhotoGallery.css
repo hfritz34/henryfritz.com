@@ -52,7 +52,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-container.vertical .gallery-photo {
+  object-position: 20% 30%;
+}
+
+.photo-container.horizontal .gallery-photo {
+  object-position: center center;
 }
 
 .photo-container:hover .gallery-photo {

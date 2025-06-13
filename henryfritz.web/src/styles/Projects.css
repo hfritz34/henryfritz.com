@@ -203,22 +203,24 @@
 }
 
 .project-logo {
-  margin-top: 2rem;
+  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 220px;
+  padding-bottom: 80px;
 }
 
 .company-logo {
   width: 180px;
   height: 180px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 35px;
-  padding: 1rem;
+  padding: 0;
   background: transparent;
   backdrop-filter: none;
   border: none;
-  box-shadow: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
