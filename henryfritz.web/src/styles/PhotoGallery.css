@@ -85,4 +85,44 @@
 
 .photo-container.horizontal .gallery-photo {
   object-position: center center;
+}
+
+@media (max-width: 600px) {
+  .photo-gallery {
+    padding: 1.2rem 0.2rem;
+    margin: 1rem 0.1rem;
+    border-radius: 10px;
+  }
+  .photo-gallery h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+  .photo-gallery-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1.7fr;
+    grid-template-rows: 120px 120px;
+    gap: 0.5rem;
+    max-width: 100vw;
+    min-width: 0;
+  }
+  .photo-container.vertical {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    height: 100%;
+    max-height: 260px;
+  }
+  .photo-container.horizontal {
+    grid-column: 2 / 3;
+    max-height: 120px;
+  }
+  .photo-container {
+    border-radius: 6px;
+    min-height: 0;
+  }
+  .gallery-photo {
+    min-height: 0;
+    max-height: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 } 

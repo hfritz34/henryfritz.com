@@ -11,6 +11,9 @@ const HeroV2 = () => {
           <div className="bullet-h" style={{ top: '65%', animationDelay: '3s' }}></div>
           <div className="bullet-v" style={{ left: '30%', animationDelay: '1.5s' }}></div>
           <div className="bullet-v" style={{ left: '70%', animationDelay: '4.5s' }}></div>
+          {/* Mobile-only vertical shooting stars */}
+          <div className="bullet-v mobile-only" style={{ left: '15%', animationDelay: '2.2s' }}></div>
+          <div className="bullet-v mobile-only" style={{ left: '85%', animationDelay: '5.2s' }}></div>
         </div>
         <div className="hero-v2-content">
           <AnimatedText />

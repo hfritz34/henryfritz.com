@@ -109,4 +109,26 @@
 .animated-text-container [class*="cursor"],
 .animated-text-container [data-cursor="true"] {
   color: #60A5FA !important;
+}
+
+@media (max-width: 600px) {
+  .animated-text-container {
+    font-size: 1.5rem;
+    margin: 2rem 0 0.5rem 0;
+  }
+  .animated-text {
+    min-height: 2.2rem;
+    font-size: 1.2em;
+  }
+  .custom-cursor {
+    font-size: 1.2em;
+    margin-left: 2px;
+  }
+  .name-text {
+    font-size: 2.2rem;
+    margin-top: 0.3rem;
+  }
+  .text-with-cursor {
+    align-items: center;
+  }
 } 

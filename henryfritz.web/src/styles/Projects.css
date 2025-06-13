@@ -228,4 +228,24 @@
   transform: scale(1.08);
   border-color: none;
   box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .project-card:first-child .project-logo {
+    margin-top: 2.5rem;
+    padding-bottom: 0;
+  }
+  .project-card:first-child a {
+    margin-bottom: 2.2rem;
+    display: block;
+  }
+  .ios-apps {
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+  .app-logo {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0.5rem;
+  }
 } 

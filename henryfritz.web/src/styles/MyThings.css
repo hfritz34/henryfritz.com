@@ -85,17 +85,10 @@
 .listening-section:hover::before,
 .working-section:hover::before {
   opacity: 1;
-  animation: rotate-glow 5s linear infinite;
+  animation: 5s linear infinite;
 }
 
-@keyframes rotate-glow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 
 .listening-section:hover,
 .working-section:hover {
