@@ -123,7 +123,7 @@ const MyThings = () => {
               <h4>Prestige</h4>
               <p>Music Social Network Platform with Spotify Integration</p>
               <a 
-                href="https://github.com/hfritz34/Prestige" 
+                href="https://github.com/hfritz34/prestige-web"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="project-link"

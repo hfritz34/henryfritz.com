@@ -70,7 +70,7 @@ function App() {
             <div className="project-card">
               <h3>Prestige</h3>
               <p>Music Social Network Platform with Spotify Integration</p>
-              <a href="https://github.com/hfritz34/Prestige" target="_blank" rel="noopener noreferrer">View Project</a>
+              <a href="https://github.com/hfritz34/prestige-web" target="_blank" rel="noopener noreferrer">View Project</a>
               <Carousel 
                 images={[prestigeImage1, prestigeImage2, prestigeImage3, prestigeImage4]} 
               />
