@@ -228,7 +228,7 @@
   transform: scale(1.08);
   border-color: none;
   box-shadow: none;
-}
+} 
 
 @media (max-width: 600px) {
   .project-card:first-child .project-logo {

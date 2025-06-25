@@ -14,22 +14,22 @@ const MyThings = () => {
   // Hardcoded current listening data
   const currentlyListening = {
     song: {
-      name: "Ageispolis",
-      artist: "Aphex Twin",
-      id: "7KRQoq9GeWeCm0ZAXg5XMb",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b27338906032688bb13b135ce19a",
+      name: "Time Well Spent",
+      artist: "Vegyn",
+      id: "5Yh2kwmgRsEfcWh9O82b07",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b273713972bc8bb25ef21c39d448",
       color: "#4CAF50"
     },
     album: {
-      name: "Untrue",
-      artist: "Burial",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b27355018696782c175bdbaa3b5d",
-      spotifyUrl: "https://open.spotify.com/album/1iRPiEYHIX2zpF8lkW54SK"
+      name: "What The Feng",
+      artist: "Feng",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b273e9b4b33ac93a78e8e504c641",
+      spotifyUrl: "https://open.spotify.com/album/5asi6xhIro5qMzaEojet0l"
     },
     artist: {
-      name: "Paris Texas",
-      imageUrl: "https://i.scdn.co/image/ab6761610000e5ebcd4785b475935db2fdb9915d",
-      spotifyUrl: "https://open.spotify.com/artist/1SCrMreNPJYSRZIlRe9SUq"
+      name: "Aphex Twin",
+      imageUrl: "https://i.scdn.co/image/ab6761610000e5ebaa3c91d792eb520a5d58daa5",
+      spotifyUrl: "https://open.spotify.com/artist/6kBDZFXuLrZgHnvmPu9NsG"
     }
   };
 

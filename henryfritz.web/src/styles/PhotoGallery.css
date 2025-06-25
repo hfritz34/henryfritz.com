@@ -85,7 +85,7 @@
 
 .photo-container.horizontal .gallery-photo {
   object-position: center center;
-}
+} 
 
 @media (max-width: 600px) {
   .photo-gallery {

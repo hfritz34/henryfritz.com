@@ -109,7 +109,7 @@
 .animated-text-container [class*="cursor"],
 .animated-text-container [data-cursor="true"] {
   color: #60A5FA !important;
-}
+} 
 
 @media (max-width: 600px) {
   .animated-text-container {

@@ -170,7 +170,7 @@
     transform: translateY(120vh);
     opacity: 0;
   }
-}
+} 
 
 .mobile-only {
   display: none;
