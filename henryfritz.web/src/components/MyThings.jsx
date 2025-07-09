@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/MyThings.css';
 import prestigeImage4 from '../assets/image4.png';
 import BeatVisualizer from './BeatVisualizer';
+import newPrestige from '../assets/PRESTIGE.png'
 
 const MyThings = () => {
   const [showPlayer, setShowPlayer] = useState(false);
@@ -118,7 +119,7 @@ const MyThings = () => {
         <div className="working-section">
           <h3>What I'm Working On</h3>
           <div className="project-display">
-            <img src={prestigeImage4} alt="Current Project - Prestige" />
+            <img src={newPrestige} alt="Current Project - Prestige" />
             <div className="project-info">
               <h4>Prestige</h4>
               <p>Music Social Network Platform with Spotify Integration</p>
