@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/MyThings.css';
 import prestigeImage4 from '../assets/image4.png';
 import BeatVisualizer from './BeatVisualizer';
-import newPrestige from '../assets/PRESTIGE.png'
+import newPrestige from '../assets/PRESTIGED.png'
 
 const MyThings = () => {
   const [showPlayer, setShowPlayer] = useState(false);
