@@ -117,7 +117,7 @@ const MyThings = () => {
 
         {/* What I'm Working On */}
         <div className="working-section">
-          <h3>What I'm Working On</h3>
+          <h3>What I'm Building</h3>
           <div className="project-display">
             <img src={newPrestige} alt="Current Project - Prestige" />
             <div className="project-info">
