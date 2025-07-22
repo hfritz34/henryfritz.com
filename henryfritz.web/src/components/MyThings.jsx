@@ -3,6 +3,7 @@ import '../styles/MyThings.css';
 import prestigeImage4 from '../assets/image4.png';
 import BeatVisualizer from './BeatVisualizer';
 import newPrestige from '../assets/PRESTIGED.png'
+import prestigeLogo from '../assets/prestige_logo.png';
 
 const MyThings = () => {
   const [showPlayer, setShowPlayer] = useState(false);
@@ -118,19 +119,29 @@ const MyThings = () => {
         {/* What I'm Working On */}
         <div className="working-section">
           <h3>What I'm Building</h3>
-          <div className="project-display">
-            <img src={newPrestige} alt="Current Project - Prestige" />
+          <div className="current-project">
+            <div className="project-image">
+              <img src={prestigeLogo} alt="Current Project - Prestige" />
+            </div>
             <div className="project-info">
-              <h4>Prestige</h4>
-              <p>Music Social Network Platform with Spotify Integration</p>
-              <a 
-                href="https://github.com/hfritz34/prestige-web"
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                View Project
-              </a>
+              <div className="project-header">
+                <span className="currently-working-on">What I'm working on</span>
+                <span className="live-indicator"></span>
+              </div>
+              <div className="project-details">
+                <div className="project-name-container">
+                  <h4>Prestige</h4>
+                  <p>Music Social Network Platform with Spotify Integration</p>
+                  <a 
+                    href="https://github.com/hfritz34/prestige_native" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="view-project-button"
+                  >
+                    View Project
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
