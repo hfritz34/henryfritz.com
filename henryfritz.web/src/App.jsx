@@ -62,7 +62,6 @@ function App() {
             <div className="project-card">
               <h3>AlphaBet</h3>
               <p>Building a new way to bet on sports with friends</p>
-              <a href="https://joinalphabet.com/" target="_blank" rel="noopener noreferrer">View Project</a>
               <div className="project-logo">
                 <img src={alphabetLogo} alt="AlphaBet Logo" className="company-logo" />
               </div>
