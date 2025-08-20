@@ -16,10 +16,10 @@ const MyThings = () => {
   // Hardcoded current listening data
   const currentlyListening = {
     song: {
-      name: "Time Well Spent",
-      artist: "Vegyn",
-      id: "5Yh2kwmgRsEfcWh9O82b07",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b273713972bc8bb25ef21c39d448",
+      name: "soiree (take 3)",
+      artist: "haruka nakamura",
+      id: "3bWGtFi2w2N7FhX2i5BBb5",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b27385da2c95bdf3ce3628dbc9d5",
       color: "#4CAF50"
     },
     album: {
