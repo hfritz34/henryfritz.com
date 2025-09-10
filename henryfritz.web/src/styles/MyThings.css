@@ -436,6 +436,7 @@
   color: #60A5FA;
   margin-bottom: 1rem;
   transition: color 0.3s ease;
+  font-size: 1.5rem; /* Slightly larger heading */
 }
 
 .current-project:hover .project-info h4 {
@@ -462,6 +463,11 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+}
+
+/* Add space between the two action buttons */
+.view-project-button + .view-project-button {
+  margin-left: 0.75rem;
 }
 
 .view-project-button::before {

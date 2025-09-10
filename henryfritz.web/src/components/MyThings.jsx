@@ -125,8 +125,7 @@ const MyThings = () => {
             </div>
             <div className="project-info">
               <div className="project-header">
-                <span className="currently-working-on">What I'm working on</span>
-                <span className="live-indicator"></span>
+               
               </div>
               <div className="project-details">
                 <div className="project-name-container">
@@ -139,6 +138,14 @@ const MyThings = () => {
                     className="view-project-button"
                   >
                     View Project
+                  </a>
+                  <a 
+                    href="https://prestigedmusic.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="view-project-button"
+                  >
+                    View Website
                   </a>
                 </div>
               </div>
