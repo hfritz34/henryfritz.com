@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import useResponsive from './hooks/useResponsive'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './styles/App.css'
@@ -6,6 +7,8 @@ import './styles/About.css'
 import './styles/Skills.css'
 import './styles/Resume.css'
 import './styles/Projects.css'
+import './styles/mobile.css'
+import './styles/responsive.css'
 import Navbar from './components/Navbar'
 import Carousel from './components/Carousel'
 import MyThings from './components/MyThings'
@@ -33,6 +36,8 @@ import Experience from './components/Experience';
 import ContactDotsBackdrop from './components/ContactDotsBackdrop';
 
 function App() {
+  const { windowSize, isMobile, isTablet, isDesktop } = useResponsive();
+  
   const galleryImages = [
     { src: henryJpg, alt: 'Henry Fritz', orientation: 'vertical' },
     { src: thewaterJpeg, alt: 'Water', orientation: 'horizontal' },

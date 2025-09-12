@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
+  max-width: min(100%, 1280px);
   margin: 0 auto;
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 2rem);
   text-align: center;
   position: relative;
 }
@@ -48,7 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -56,7 +56,7 @@
 
 /* Contact Section */
 .contact {
-  padding: 4rem 2rem;
+  padding: clamp(3rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2rem);
   max-width: 100%;
   width: 100vw;
   margin: 0;
@@ -125,8 +125,8 @@
 }
 
 .contact h2 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   color: #fff;
 }
 
@@ -145,16 +145,18 @@
 
 .social-links {
   display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-top: clamp(0.75rem, 2vw, 1rem);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-links a {
-  padding: 0.75rem 1.5rem;
+  padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1.2rem, 2.5vw, 1.5rem);
   background: linear-gradient(135deg, #f472b6, #c084fc);
   color: white;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: clamp(8px, 1.5vw, 12px);
   font-weight: 500;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.08);
@@ -168,11 +170,11 @@
 
 /* Footer */
 footer {
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  margin-top: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
   color: #888;
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 1.5vw, 0.9rem);
 }
 
 @media (max-width: 768px) {
