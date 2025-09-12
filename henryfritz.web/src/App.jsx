@@ -15,10 +15,11 @@ import thewaterJpeg from './assets/thewater.jpeg'
 import vinlandJpeg from './assets/vinland.jpeg'
 import studyMethodLogo from './assets/studymethod-logo.png'
 import worrdayLogo from './assets/worrday-logo.png'
-import prestigeImage1 from './assets/image1.png'
-import prestigeImage2 from './assets/image2.png'
-import prestigeImage3 from './assets/image3.png'
-import prestigeImage4 from './assets/image4.png'
+import prestigeWhite from './assets/prestige_white.png'
+import prestigePurple from './assets/prestige_purple.png'
+import prestigeWhiteBlack from './assets/prestige_white_black.png'
+import prestigePurpleBlack from './assets/prestige_purple_black.png'
+import prestigeBanner from './assets/prestige_logo_wtext.png'
 import neudesicLogo from './assets/neudesic-logo.png'
 import alphabetLogo from './assets/alphabetlogo.png'
 import ResumeViewer from './components/ResumeViewer'; // Import the new component
@@ -26,6 +27,7 @@ import AnimatedText from './components/AnimatedText';
 import HeroV2 from './components/HeroV2';
 import PhotoGallery from './components/PhotoGallery';
 import Experience from './components/Experience';
+import ContactDotsBackdrop from './components/ContactDotsBackdrop';
 
 function App() {
   const galleryImages = [
@@ -69,9 +71,9 @@ function App() {
             <div className="project-card">
               <h3>Prestige</h3>
               <p>Music Social Network Platform with Spotify Integration</p>
-              <a href="https://github.com/hfritz34/prestige-web" target="_blank" rel="noopener noreferrer">View Project</a>
+              <a href="https://github.com/hfritz34/prestige_native" target="_blank" rel="noopener noreferrer">View Project</a>
               <Carousel 
-                images={[prestigeImage1, prestigeImage2, prestigeImage3, prestigeImage4]} 
+                images={[prestigeWhite, prestigePurple, prestigeWhiteBlack, prestigePurpleBlack]} 
               />
             </div>
             <div className="project-card">
@@ -149,6 +151,7 @@ function App() {
             <div className="skill-category">
               <h3>Certifications</h3>
               <div className="skill-list">
+                <span className="skill-item">AWS Practitioner</span>
                 <span className="skill-item">Microsoft Azure Fundamentals</span>
                 <span className="skill-item">IBM Z Xplore Concepts</span>
                 <span className="skill-item">Academind Flutter & Dart</span>
@@ -163,7 +166,8 @@ function App() {
           <div className="resume-content">
             <ResumeViewer fileUrl="/resume.pdf" />
             <div className="resume-download-link">
-              Having trouble viewing? <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+              <p>Having trouble viewing?</p>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-download-button">Download PDF</a>
             </div>
           </div>
         </section>
@@ -175,6 +179,7 @@ function App() {
 
         {/* Contact Section */}
         <section id="contact" className="contact">
+          <ContactDotsBackdrop />
           <h2>Get In Touch</h2>
           <div className="contact-info">
             <p>Email: henryfritz02@gmail.com</p>

@@ -5,23 +5,22 @@ import '../styles/AnimatedText.css';
 const AnimatedText = () => {
   return (
     <div className="animated-text-container">
+      <h1 className="name-text">Hi, I'm Henry</h1>
       <div className="text-with-cursor">
         <TypeAnimation
           sequence={[
-            'Hi, I\'m',
-            1000,
-            'Hi, I\'m a Developer.',
-            2000,
-            'Hi, I\'m an Architect.',
-            2000,
-            'Hi, I\'m a Problem-Solver.',
-            2000,
-            'Hi, I\'m a Creative.',
-            2000,
+            'I build apps.',
+            3000,
+            'I solve problems.',
+            3000,
+            'I design experiences.',
+            3000,
+            'I connect people.',
+            3000,
           ]}
           wrapper="span"
-          speed={30}
-          deletionSpeed={20}
+          speed={40}
+          deletionSpeed={15}
           repeat={Infinity}
           className="animated-text"
           cursor={false}
@@ -29,7 +28,6 @@ const AnimatedText = () => {
         />
         <span className="custom-cursor">|</span>
       </div>
-      <h1 className="name-text">Henry Fritz</h1>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/MyThings.css';
-import prestigeImage4 from '../assets/image4.png';
 import BeatVisualizer from './BeatVisualizer';
 import newPrestige from '../assets/PRESTIGED.png'
 import prestigeLogo from '../assets/prestige_logo.png';
@@ -29,9 +28,9 @@ const MyThings = () => {
       spotifyUrl: "https://open.spotify.com/album/5asi6xhIro5qMzaEojet0l"
     },
     artist: {
-      name: "Aphex Twin",
-      imageUrl: "https://i.scdn.co/image/ab6761610000e5ebaa3c91d792eb520a5d58daa5",
-      spotifyUrl: "https://open.spotify.com/artist/6kBDZFXuLrZgHnvmPu9NsG"
+      name: "fakemink",
+      imageUrl: "https://i.scdn.co/image/ab6761610000e5eb6c22ee1a94a0fa6196089629",
+      spotifyUrl: "https://open.spotify.com/artist/0qc4BFxcwRFZfevTck4fOi"
     }
   };
 

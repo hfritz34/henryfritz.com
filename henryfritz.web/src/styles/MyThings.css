@@ -4,7 +4,7 @@
   background-color: transparent;
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1), transparent);
+  border-image-source: linear-gradient(to right, rgba(196, 132, 252, 0.2), rgba(244, 114, 182, 0.1), transparent);
   color: #fff;
   width: 100%;
   max-width: 1200px;
@@ -18,8 +18,8 @@
 
 .my-things:hover {
   transform: translateY(-4px);
-  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.4), rgba(37, 99, 235, 0.2), transparent);
-  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.05);
+  border-image-source: linear-gradient(to right, rgba(196, 132, 252, 0.4), rgba(244, 114, 182, 0.2), transparent);
+  box-shadow: 0 8px 32px rgba(244, 114, 182, 0.05);
 }
 
 /* Add box-sizing to all elements to ensure proper sizing */
@@ -39,7 +39,7 @@
 
 .my-things h2:hover {
   transform: translateY(-2px);
-  color: #60A5FA;
+  color: #f472b6;
 }
 
 .things-container {
@@ -53,12 +53,12 @@
 
 .listening-section,
 .working-section {
-  background: rgba(13, 17, 23, 0.5);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(50,50,50,0.6), rgba(0,0,0,0.8));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.1);
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -109,7 +109,7 @@
 
 .listening-section:hover h3,
 .working-section:hover h3 {
-  color: #60A5FA;
+  color: #f472b6;
 }
 
 .music-grid {
@@ -124,11 +124,12 @@
 }
 
 .music-item {
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(96, 165, 250, 0.1);
-  padding: 1rem;
+  background: linear-gradient(145deg, rgba(40,40,40,0.7), rgba(0,0,0,0.85));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
   border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   color: #fff;
@@ -149,7 +150,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.05) 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -160,14 +161,14 @@
 }
 
 .music-item:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: rgba(96, 165, 250, 0.3);
-  box-shadow: 0 16px 32px rgba(59, 130, 246, 0.2);
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 2px 2px rgba(255,255,255,0.1);
 }
 
 .music-item h4 {
   margin-bottom: 1rem;
-  color: #60A5FA;
+  color: #f472b6;
   font-size: 1.2rem;
   height: 1.5rem;
   position: relative;
@@ -176,7 +177,7 @@
 }
 
 .music-item:hover h4 {
-  color: #3B82F6;
+  color: #c084fc;
 }
 
 .music-item p {
@@ -211,7 +212,7 @@
 }
 
 .music-item:hover img {
-  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 32px rgba(244, 114, 182, 0.3);
   transform: scale(1.05);
 }
 
@@ -273,7 +274,7 @@
 .play-icon {
   color: white;
   font-size: 2rem;
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.9), rgba(59, 130, 246, 0.9));
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.9), rgba(196, 132, 252, 0.9));
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -285,7 +286,7 @@
 
 .play-icon:hover {
   transform: scale(1.1);
-  background: linear-gradient(135deg, rgba(59, 130, 246, 1), rgba(37, 99, 235, 1));
+  background: linear-gradient(135deg, rgba(196, 132, 252, 1), rgba(244, 63, 94, 1));
 }
 
 .spotify-player {
@@ -302,7 +303,7 @@
 }
 
 .spotify-player:hover iframe {
-  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 8px 32px rgba(244, 114, 182, 0.2);
 }
 
 .project-display {
@@ -311,7 +312,7 @@
   gap: 2rem;
   background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(244, 114, 182, 0.1);
   padding: 2rem;
   border-radius: 12px;
   margin-top: 1.5rem;
@@ -327,7 +328,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.05) 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -339,8 +340,8 @@
 
 .project-display:hover {
   transform: translateY(-4px);
-  border-color: rgba(96, 165, 250, 0.3);
-  box-shadow: 0 16px 32px rgba(59, 130, 246, 0.2);
+  border-color: rgba(244, 114, 182, 0.3);
+  box-shadow: 0 16px 32px rgba(244, 114, 182, 0.2);
 }
 
 .project-display img {
@@ -376,13 +377,13 @@
 }
 
 .project-info h4 {
-  color: #60A5FA;
+  color: #f472b6;
   margin-bottom: 1rem;
   transition: color 0.3s ease;
 }
 
 .project-display:hover .project-info h4 {
-  color: #3B82F6;
+  color: #c084fc;
 }
 
 .project-info p {
@@ -398,12 +399,13 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(96, 165, 250, 0.1);
+  background: linear-gradient(145deg, rgba(50,50,50,0.7), rgba(0,0,0,0.85));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 16px;
   margin-top: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -416,7 +418,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.05) 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -428,19 +430,19 @@
 
 .current-project:hover {
   transform: translateY(-4px);
-  border-color: rgba(96, 165, 250, 0.3);
-  box-shadow: 0 16px 32px rgba(59, 130, 246, 0.2);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 2px 2px rgba(255,255,255,0.1);
 }
 
 .current-project .project-info h4 {
-  color: #60A5FA;
+  color: #f472b6;
   margin-bottom: 1rem;
   transition: color 0.3s ease;
   font-size: 1.5rem; /* Slightly larger heading */
 }
 
 .current-project:hover .project-info h4 {
-  color: #3B82F6;
+  color: #c084fc;
 }
 
 .current-project .project-info p {
@@ -456,7 +458,7 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #60A5FA, #3B82F6);
+  background: linear-gradient(135deg, #f472b6, #c084fc);
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -486,16 +488,16 @@
 }
 
 .view-project-button:hover {
-  background: linear-gradient(135deg, #3B82F6, #1e40af);
+  background: linear-gradient(135deg, #c084fc, #f43f5e);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 8px 24px rgba(244, 114, 182, 0.4);
 }
 
 .project-link {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #60A5FA, #3B82F6);
+  background: linear-gradient(135deg, #f472b6, #c084fc);
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -520,9 +522,9 @@
 }
 
 .project-link:hover {
-  background: linear-gradient(135deg, #3B82F6, #1e40af);
+  background: linear-gradient(135deg, #c084fc, #f43f5e);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 8px 24px rgba(244, 114, 182, 0.4);
 }
 
 /* Beat Visualizer alignment */
@@ -534,10 +536,25 @@
   z-index: 1;
 }
 
+/* Removed asteroid animation */
+
 /* Responsive styles */
 @media (max-width: 1024px) {
   .music-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .music-item::after {
+    transform: rotate(0deg) translateX(80px) rotate(0deg);
+  }
+  
+  @keyframes orbit {
+    from {
+      transform: rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(80px) rotate(-360deg);
+    }
   }
 }
 

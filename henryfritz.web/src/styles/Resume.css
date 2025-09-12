@@ -19,10 +19,12 @@
 }
 
 .resume-download-link {
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
   margin-top: 1rem;
-  width: 100%;
 }
 
 .resume-download-link a {
@@ -30,6 +32,21 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+}
+.resume-download-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2dd4ff, #c084fc, #f472b6);
+  color: #fff !important;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(236, 72, 153, 0.35);
 }
 
 .resume-download-link a:hover {

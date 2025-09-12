@@ -3,53 +3,59 @@
   flex-direction: column;
   align-items: center;
   font-family: 'Satoshi', sans-serif;
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 700;
   line-height: 1.2;
   margin: 4rem 0 1rem 0;
   padding: 0;
   text-align: center;
   width: 100%;
+  gap: 1rem;
 }
 
 .text-with-cursor {
   display: flex;
   align-items: baseline;
   justify-content: center;
+  font-size: 5rem;
+  margin: 0;
 }
 
 .animated-text {
   background: linear-gradient(
     90deg,
-    #3B82F6 0%,
-    #60A5FA 50%,
-    #93C5FD 100%
+    #2dd4ff 0%,
+    #3b82f6 20%,
+    #c084fc 40%,
+    #f472b6 60%,
+    #f43f5e 80%,
+    #2dd4ff 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  min-height: 4rem;
+  min-height: 5rem;
   position: relative;
 }
 
 .custom-cursor {
-  color: #60A5FA;
+  color: #f472b6;
   font-weight: 400;
   font-size: 1em;
-  margin-left: 4px;
+  margin-left: 6px;
   display: inline-block;
   animation: cursor-blink 1s infinite;
 }
 
 .name-text {
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: 800;
-  margin-top: 0.5rem;
+  margin: 0;
   color: #ffffff;
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
-  animation-delay: 1s;
+  animation-delay: 0.3s;
 }
 
 .hero-text {
@@ -94,41 +100,55 @@
 
 .animated-text {
   background-size: 200% auto;
-  animation: gradient 8s ease infinite;
+  animation: gradient 6s ease infinite;
 }
 
 /* Style the TypeAnimation cursor - multiple selectors to catch different implementations */
 .animated-text .cursor,
 .animated-text::after,
 .animated-text > .cursor {
-  color: #60A5FA !important;
+  color: #f472b6 !important;
   font-weight: 400 !important;
 }
 
 /* Alternative approach - target any element that might be the cursor */
 .animated-text-container [class*="cursor"],
 .animated-text-container [data-cursor="true"] {
-  color: #60A5FA !important;
+  color: #f472b6 !important;
 } 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .animated-text-container {
-    font-size: 1.5rem;
-    margin: 2rem 0 0.5rem 0;
+    font-size: 3rem;
   }
+  
+  .name-text {
+    font-size: 3rem;
+  }
+  
+  .text-with-cursor {
+    font-size: 3rem;
+  }
+  
   .animated-text {
-    min-height: 2.2rem;
-    font-size: 1.2em;
+    min-height: 3.5rem;
   }
-  .custom-cursor {
-    font-size: 1.2em;
-    margin-left: 2px;
+}
+
+@media (max-width: 480px) {
+  .animated-text-container {
+    font-size: 2.2rem;
   }
+  
   .name-text {
     font-size: 2.2rem;
-    margin-top: 0.3rem;
   }
+  
   .text-with-cursor {
-    align-items: center;
+    font-size: 2.2rem;
+  }
+  
+  .animated-text {
+    min-height: 2.5rem;
   }
 } 

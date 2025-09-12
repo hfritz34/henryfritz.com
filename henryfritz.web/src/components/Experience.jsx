@@ -10,10 +10,18 @@ const Experience = () => {
     <section id="experience" className="experience">
       <h2>Where I've Worked</h2>
       <div className="logo-grid">
-        <img src={aigLogo} alt="AIG" />
-        <img src={ibmLogo} alt="IBM" />
-        <img src={ohioStateLogo} alt="Ohio State" />
-        <img src={neudesicLogo} alt="Neudesic" />
+        <div className="logo-item">
+          <img src={aigLogo} alt="AIG" />
+        </div>
+        <div className="logo-item">
+          <img src={ibmLogo} alt="IBM" />
+        </div>
+        <div className="logo-item">
+          <img src={ohioStateLogo} alt="Ohio State" />
+        </div>
+        <div className="logo-item">
+          <img src={neudesicLogo} alt="Neudesic" />
+        </div>
       </div>
     </section>
   );

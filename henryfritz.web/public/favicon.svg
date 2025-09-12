@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="6" fill="#2563eb"/>
-  <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
-    HF
-  </text>
-</svg> 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100">
+  <defs>
+    <linearGradient id="hmfGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4ff" />
+      <stop offset="50%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+  </defs>
+  <g fill="url(#hmfGradient)">
+    <rect x="10" y="25" width="6" height="50" rx="3" />
+    <rect x="30" y="25" width="6" height="50" rx="3" />
+    <rect x="16" y="46" width="20" height="6" rx="3" />
+    <rect x="50" y="25" width="6" height="50" rx="3" />
+    <rect x="94" y="25" width="6" height="50" rx="3" />
+    <polygon points="56,25 72,45 88,25 88,32 75,48 69,48 56,32" />
+    <rect x="114" y="25" width="6" height="50" rx="3" />
+    <rect x="120" y="25" width="26" height="6" rx="3" />
+    <rect x="120" y="46" width="18" height="6" rx="3" />
+  </g>
+</svg>

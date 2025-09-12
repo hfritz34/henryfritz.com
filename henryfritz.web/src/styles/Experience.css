@@ -1,14 +1,14 @@
 /* src/styles/Experience.css */
 
 .experience {
-  padding: 1rem 2rem 4rem 2rem;
+  padding: 2rem;
   max-width: 1200px;
   margin: 2rem auto;
-  background-color: transparent;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1), transparent);
+  background: linear-gradient(145deg, rgba(50,50,50,0.6), rgba(0,0,0,0.8));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.1);
   color: #fff;
   text-align: center;
   position: relative;
@@ -18,8 +18,8 @@
 
 .experience:hover {
   transform: translateY(-4px);
-  border-image-source: linear-gradient(to right, rgba(59, 130, 246, 0.4), rgba(37, 99, 235, 0.2), transparent);
-  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 2px 2px rgba(255,255,255,0.1);
 }
 
 .experience h2 {
@@ -33,7 +33,7 @@
 
 .experience h2:hover {
   transform: translateY(-2px);
-  color: #60A5FA;
+  color: #f472b6;
 }
 
 .logo-grid {
@@ -46,6 +46,11 @@
   z-index: 1;
 }
 
+.logo-item {
+  position: relative;
+  display: inline-block;
+}
+
 .logo-grid img {
   height: 80px;
   opacity: 0.8;
@@ -54,8 +59,8 @@
   padding: 0.5rem;
 }
 
-.logo-grid img:hover {
+.logo-item:hover img {
   opacity: 1;
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 8px 24px rgba(244, 114, 182, 0.2);
 } 
