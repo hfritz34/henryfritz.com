@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/MyThings.css';
 import BeatVisualizer from './BeatVisualizer';
+import RecentlyLikedSongs from './RecentlyLikedSongs';
 import newPrestige from '../assets/PRESTIGED.png'
 import prestigeLogo from '../assets/prestige_logo.png';
 
@@ -113,6 +114,9 @@ const MyThings = () => {
           </div>
           
           <BeatVisualizer color={currentlyListening.song.color} isPlaying={showPlayer} />
+          
+          {/* Recently Liked Songs */}
+          <RecentlyLikedSongs />
         </div>
 
         {/* What I'm Working On */}
