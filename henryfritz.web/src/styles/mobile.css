@@ -214,78 +214,9 @@ body {
     padding: 0;
   }
 
-  /* My Things section mobile fixes */
-  .my-things {
-    margin: 2rem 1rem;
-    padding: 2rem 1.5rem;
-    width: calc(100% - 2rem);
-  }
+  /* My Things section mobile fixes - removed, handled in MyThings.css */
 
-  .my-things h2 {
-    font-size: 2rem;
-  }
-
-  .things-container {
-    gap: 2rem;
-  }
-
-  .listening-section,
-  .working-section {
-    padding: 1.5rem;
-  }
-
-  .music-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .music-item {
-    padding: 1rem;
-  }
-
-  .music-image-container,
-  .music-item img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .current-project {
-    padding: 1.5rem;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .project-image img {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  /* Photo Gallery mobile fixes */
-  .photo-gallery {
-    margin: 2rem 1rem;
-    padding: 2rem 1.5rem;
-    width: calc(100% - 2rem);
-  }
-
-  .photo-gallery h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .photo-gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 0.75rem;
-  }
-
-  .photo-container {
-    height: 200px;
-    padding: 3px;
-  }
-
-  .gallery-photo {
-    border-radius: 8px;
-  }
+  /* Photo Gallery mobile fixes - removed, handled in PhotoGallery.css */
 
   /* Contact section mobile fixes */
   .contact {

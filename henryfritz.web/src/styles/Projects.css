@@ -232,22 +232,106 @@
   box-shadow: none;
 } 
 
-@media (max-width: 600px) {
-  .project-card:first-child .project-logo {
-    margin-top: 2.5rem;
+@media (max-width: 768px) {
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .project-card h3 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .project-card p {
+    text-align: center;
+  }
+  
+  .project-card a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem auto;
+    background: linear-gradient(135deg, #f472b6, #c084fc);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 150px;
+  }
+  
+  .project-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
     padding-bottom: 0;
   }
-  .project-card:first-child a {
-    margin-bottom: 2.2rem;
-    display: block;
+  
+  .company-logo {
+    width: 150px;
+    height: 150px;
   }
+  
   .ios-apps {
-    gap: 0.7rem;
-    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
   }
+  
+  .app-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .app-logo {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 0.5rem;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card a {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    min-width: 130px;
+  }
+  
+  .company-logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .ios-apps {
+    gap: 1rem;
+  }
+  
+  .app-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-card {
+    padding: 1rem;
+  }
+  
+  .company-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .app-logo {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .ios-apps {
+    gap: 0.75rem;
   }
 } 

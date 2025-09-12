@@ -225,6 +225,7 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  gap: 0.25rem;
 }
 
 .music-info .title {
@@ -559,33 +560,202 @@
 }
 
 @media (max-width: 768px) {
+  .my-things {
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+    width: calc(100% - 2rem);
+  }
+  
   .music-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .music-item {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 250px;
+  }
+  
+  .music-image-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem auto;
+    flex-shrink: 0;
+  }
+  
+  .music-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .music-info {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .music-info .title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+  }
+  
+  .music-info .artist-name {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
   }
 
   .project-display {
     flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
   }
 
   .project-display img {
     width: 100%;
-    max-width: 300px;
-  }
-
-  .music-item img,
-  .music-image-container {
-    width: 100%;
-    max-width: 250px;
+    max-width: 280px;
+    margin: 0 auto;
   }
 
   .current-project {
     flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
   }
 
   .current-project .project-image img {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .spotify-player {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .music-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .music-item {
+    padding: 1rem;
+    min-height: 220px;
+  }
+  
+  .music-image-container {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .music-item img {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .music-info .title {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+  
+  .music-info .artist-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .music-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  
+  .music-image-container {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .music-item img {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .music-info {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  
+  .music-info .title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  .music-info .artist-name {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  
+  .project-display img,
+  .current-project .project-image img {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 380px) {
+  .my-things {
+    padding: 1.5rem 0.75rem;
+    margin: 1.5rem 0.5rem;
+    width: calc(100% - 1rem);
+  }
+  
+  .music-item {
+    padding: 1.25rem;
+    gap: 0.75rem;
+  }
+  
+  .music-image-container {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .music-item img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .music-info .title {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+  
+  .music-info .artist-name {
+    font-size: 0.75rem;
   }
 }
