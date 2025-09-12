@@ -42,8 +42,8 @@
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  gap: 3rem;
-  max-width: 600px;
+  gap: 4rem 6rem;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -55,7 +55,7 @@
 }
 
 .logo-grid img {
-  height: 80px;
+  height: 140px;
   opacity: 0.8;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 8px;
@@ -77,23 +77,23 @@
   }
   
   .logo-grid {
-    gap: 2rem;
-    max-width: 400px;
+    gap: 3rem 4rem;
+    max-width: 600px;
   }
   
   .logo-grid img {
-    height: 60px;
+    height: 110px;
   }
 }
 
 @media (max-width: 600px) {
   .logo-grid {
-    gap: 1.5rem;
-    max-width: 350px;
+    gap: 2.5rem 3.5rem;
+    max-width: 500px;
   }
   
   .logo-grid img {
-    height: 50px;
+    height: 95px;
   }
 }
 
@@ -103,22 +103,22 @@
   }
   
   .logo-grid {
-    gap: 1.25rem;
-    max-width: 300px;
+    gap: 2rem 2.5rem;
+    max-width: 420px;
   }
   
   .logo-grid img {
-    height: 45px;
+    height: 85px;
   }
 }
 
 @media (max-width: 380px) {
   .logo-grid {
-    gap: 1rem;
-    max-width: 280px;
+    gap: 1.5rem 2rem;
+    max-width: 360px;
   }
   
   .logo-grid img {
-    height: 40px;
+    height: 75px;
   }
 } 

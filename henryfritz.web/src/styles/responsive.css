@@ -145,6 +145,8 @@ p {
 .app-logo {
   width: clamp(70px, 10vw, 120px);
   height: clamp(70px, 10vw, 120px);
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Skills section fluid responsiveness */

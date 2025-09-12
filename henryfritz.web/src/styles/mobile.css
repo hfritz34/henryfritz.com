@@ -140,6 +140,8 @@ body {
   .app-logo {
     width: 80px;
     height: 80px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .company-logo {
@@ -296,6 +298,8 @@ body {
   .app-logo {
     width: 70px;
     height: 70px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .company-logo {
@@ -342,6 +346,8 @@ body {
   .app-logo {
     width: 60px;
     height: 60px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .company-logo {
