@@ -13,6 +13,9 @@ import headshot from './assets/headshot.jpeg'
 import henryJpg from './assets/adventure.jpg'
 import thewaterJpeg from './assets/thewater.jpeg'
 import vinlandJpeg from './assets/vinland.jpeg'
+import archJpeg from './assets/arch.jpeg'
+import djJpeg from './assets/dj.jpeg'
+import alleyJpeg from './assets/alley.jpeg'
 import studyMethodLogo from './assets/studymethod-logo.png'
 import worrdayLogo from './assets/worrday-logo.png'
 import prestigeWhite from './assets/prestige_white.png'
@@ -34,6 +37,9 @@ function App() {
     { src: henryJpg, alt: 'Henry Fritz', orientation: 'vertical' },
     { src: thewaterJpeg, alt: 'Water', orientation: 'horizontal' },
     { src: vinlandJpeg, alt: 'Vinland', orientation: 'horizontal' },
+    { src: archJpeg, alt: 'Arch', orientation: 'vertical' },
+    { src: djJpeg, alt: 'DJ', orientation: 'horizontal' },
+    { src: alleyJpeg, alt: 'Alley', orientation: 'horizontal' },
   ];
 
   return (
@@ -46,12 +52,13 @@ function App() {
         <section id="about" className="about">
           <div className="about-content">
             <h2>About Me</h2>
-            <p> I am a Computer Science student at The Ohio State University, graduating May 2026. Currently in the University Honors Program. Passionate about software development with experience in cloud engineering, full-stack development, and mobile development.</p>
-            <p>I thrive on turning complex problems into elegant solutions and am constantly exploring new technologies to expand my skill set. My experience ranges from developing iOS applications to working with cloud platforms like Azure and AWS.</p>
-            <p>Outside of coding, I enjoy contributing to the tech community through teaching and mentoring, helping others discover their passion for software development.</p>
-          </div>
-          <div className="about-image">
-            <img src={headshot} alt="Henry Fritz" className="headshot" />
+            <p><strong>Hey there!</strong> I'm Henry, a Computer Science student at The Ohio State University (class of 2026) who's in love with building things better.</p>
+            <p><strong>What gets me excited?</strong> I'm that person who gets genuinely excited learning about random tech – whether it's diving deep into C++ memory management, exploring the latest iOS frameworks, or figuring out how to shave milliseconds off API response times. Currently obsessing over mastering vim because efficient coding is everything.</p>
+            <p><strong>Outside the code:</strong> Huge fan of the NBA, specifically the Cavs and Timberwolves. When I'm not debugging, you'll find me at the gym, snowboarding, or planning my next travel adventure. There's something about experiencing different places that gives me fresh perspectives on problem-solving.</p>
+            <p><strong>What I focus on:</strong> C++ and mobile development. I've already shipped two apps to the App Store (with over 3,000 downloads across 22 countries!), and I'm currently putting the finishing touches on my third app, Prestige – a real-time music tracking platform that I'm super stoked about. There's nothing quite like seeing your code come to life in someone's pocket.</p>
+            <p><strong>The fun stuff:</strong> When I'm not coding, you'll find me mentoring fellow students (because teaching someone else is the best way to really understand something yourself), organizing AI workshops as an Anthropic Claude Builder Ambassador, or probably tweaking my development setup to be just a little more efficient.</p>
+            <p>I love turning complex problems into elegant solutions. Every challenge is just another puzzle waiting to be solved – and I'm here for all of it.</p>
+            <p><strong>Currently building:</strong> The future, one commit at a time. Always exploring, always learning.</p>
           </div>
         </section>
 

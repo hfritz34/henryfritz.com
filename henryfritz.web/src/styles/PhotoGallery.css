@@ -38,19 +38,25 @@
 
 .photo-gallery-grid {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: 300px 300px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 350px);
   gap: 1.5rem;
   align-items: stretch;
   justify-content: center;
-  max-width: 800px;
+  max-width: 1300px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
 .photo-container.vertical {
-  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-container.horizontal {
+  width: 100%;
+  height: 100%;
 }
 
 .photo-container {
@@ -64,9 +70,6 @@
   padding: 4px;
 }
 
-.horizontal {
-  flex: 1;
-}
 
 .photo-container:hover {
   transform: translateY(-4px) scale(1.02);
