@@ -186,7 +186,7 @@ p {
 }
 
 .logo-grid img {
-  height: clamp(60px, 8vw, 80px);
+  height: clamp(50px, 8vw, 80px);
 }
 
 /* My Things section fluid responsiveness */

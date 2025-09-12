@@ -104,28 +104,7 @@ body {
     line-height: 1.6;
   }
 
-  /* Experience section mobile fixes */
-  .experience {
-    width: 100%;
-    padding: 3rem 1rem;
-  }
-
-  .experience-container {
-    padding: 1.5rem;
-  }
-
-  .experience h2 {
-    font-size: 2rem;
-  }
-
-  .experience-card {
-    padding: 1.5rem;
-  }
-
-  .company-logo-exp {
-    width: 60px;
-    height: 60px;
-  }
+  /* Experience section mobile fixes - removed, handled in Experience.css */
 
   /* Projects section mobile fixes */
   .projects {

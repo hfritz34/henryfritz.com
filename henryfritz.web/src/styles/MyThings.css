@@ -639,6 +639,23 @@
     margin: 0 auto;
   }
   
+  .project-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .view-project-button {
+    width: 200px;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .view-project-button + .view-project-button {
+    margin-left: 0;
+  }
+  
   .spotify-player {
     padding: 0 0.5rem;
   }
