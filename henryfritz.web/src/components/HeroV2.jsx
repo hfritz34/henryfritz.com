@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/HeroV2.css';
-import AnimatedText from './AnimatedText';
 
 const HeroV2 = () => {
   return (
@@ -33,7 +32,9 @@ const HeroV2 = () => {
       
       <div className="hero-v2-container">
         <div className="hero-v2-content">
-          <AnimatedText />
+          <div className="hero-text-container">
+            <h1 className="name-text">Hi, I'm Henry</h1>
+          </div>
           <p className="hero-v2-tagline">Software Engineer | Student at The Ohio State University</p>
           <div className="hero-v2-buttons">
             <a href="#about" className="hero-v2-button primary">About Me</a>
