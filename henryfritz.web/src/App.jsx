@@ -27,7 +27,7 @@ import prestigeWhiteBlack from './assets/prestige_white_black.png'
 import prestigePurpleBlack from './assets/prestige_purple_black.png'
 import prestigeBanner from './assets/prestige_logo_wtext.png'
 import neudesicLogo from './assets/neudesic-logo.png'
-import alphabetLogo from './assets/alphabetlogo.png'
+import scratchLogo from './assets/scratch_logo2.png'
 import ResumeViewer from './components/ResumeViewer'; // Import the new component
 import AnimatedText from './components/AnimatedText';
 import HeroV2 from './components/HeroV2';
@@ -74,10 +74,11 @@ function App() {
           <h2>My Projects</h2>
           <div className="project-grid">
             <div className="project-card">
-              <h3>AlphaBet</h3>
-              <p>Building a new way to bet on sports with friends</p>
+              <h3>Scratch</h3>
+              <p>Chrome Extension for Drawing and Annotating on Webpages</p>
+              <a href="https://chromewebstore.google.com/detail/scratch/gcibnldifnbniaijhnfeaedhbeedmghh" target="_blank" rel="noopener noreferrer">View on Chrome Web Store</a>
               <div className="project-logo">
-                <img src={alphabetLogo} alt="AlphaBet Logo" className="company-logo" />
+                <img src={scratchLogo} alt="Scratch Logo" className="company-logo" />
               </div>
             </div>
             <div className="project-card">
