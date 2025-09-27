@@ -77,9 +77,9 @@ function App() {
               <h3>Scratch</h3>
               <p>Chrome Extension for Drawing and Annotating on Webpages</p>
               <a href="https://chromewebstore.google.com/detail/scratch/gcibnldifnbniaijhnfeaedhbeedmghh" target="_blank" rel="noopener noreferrer">View on Chrome Web Store</a>
-              <div className="project-logo">
-                <img src={scratchLogo} alt="Scratch Logo" className="company-logo" />
-              </div>
+              <Carousel
+                images={[scratchLogo]}
+              />
             </div>
             <div className="project-card">
               <h3>Prestige</h3>
