@@ -5,7 +5,6 @@ import viteLogo from '/vite.svg'
 import './styles/App.css'
 import './styles/About.css'
 import './styles/Skills.css'
-import './styles/Resume.css'
 import './styles/Projects.css'
 import './styles/mobile.css'
 import './styles/responsive.css'
@@ -28,7 +27,6 @@ import prestigePurpleBlack from './assets/prestige_purple_black.png'
 import prestigeBanner from './assets/prestige_logo_wtext.png'
 import neudesicLogo from './assets/neudesic-logo.png'
 import scratchLogo from './assets/scratch_logo2.png'
-import ResumeViewer from './components/ResumeViewer'; // Import the new component
 import AnimatedText from './components/AnimatedText';
 import HeroV2 from './components/HeroV2';
 import PhotoGallery from './components/PhotoGallery';
@@ -169,18 +167,6 @@ function App() {
                 <span className="skill-item">IBM Z Xplore Concepts</span>
                 <span className="skill-item">Academind Flutter & Dart</span>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Resume Section */}
-        <section id="resume" className="resume">
-          <h2>Resume</h2>
-          <div className="resume-content">
-            <ResumeViewer fileUrl="/resume.pdf" />
-            <div className="resume-download-link">
-              <p>Having trouble viewing?</p>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-download-button">Download PDF</a>
             </div>
           </div>
         </section>
