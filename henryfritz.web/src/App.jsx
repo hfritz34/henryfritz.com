@@ -61,7 +61,6 @@ function App() {
             <p><strong>What I focus on:</strong> C++ and mobile development. I've already shipped two apps to the App Store (with over 3,000 downloads across 22 countries!), and I'm currently putting the finishing touches on my third app, Prestige – a real-time music tracking platform that I'm super stoked about. There's nothing quite like seeing your code come to life in someone's pocket.</p>
             <p><strong>The fun stuff:</strong> When I'm not coding, you'll find me mentoring fellow students (because teaching someone else is the best way to really understand something yourself), organizing AI workshops as an Anthropic Claude Builder Ambassador, or probably tweaking my development setup to be just a little more efficient.</p>
             <p>I love turning complex problems into elegant solutions. Every challenge is just another puzzle waiting to be solved – and I'm here for all of it.</p>
-            <p><strong>Currently building:</strong> The future, one commit at a time. Always exploring, always learning.</p>
           </div>
         </section>
 
