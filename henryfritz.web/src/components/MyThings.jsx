@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/MyThings.css';
 import BeatVisualizer from './BeatVisualizer';
-import RecentlyLikedSongs from './RecentlyLikedSongs';
+// import RecentlyLikedSongs from './RecentlyLikedSongs'; // temporarily hidden while Prestige API is down
 import newPrestige from '../assets/PRESTIGED.png'
 import prestigeLogo from '../assets/prestige_logo.png';
 
@@ -115,8 +115,8 @@ const MyThings = () => {
           
           <BeatVisualizer color={currentlyListening.song.color} isPlaying={showPlayer} />
           
-          {/* Recently Liked Songs */}
-          <RecentlyLikedSongs />
+          {/* Recently Liked Songs (temporarily hidden) */}
+          {/* <RecentlyLikedSongs /> */}
         </div>
 
         {/* What I'm Working On */}
