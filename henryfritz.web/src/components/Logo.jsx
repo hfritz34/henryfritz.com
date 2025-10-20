@@ -1,4 +1,5 @@
 import React from 'react';
+import personalLogo from '../assets/personal_logo.png';
 
 const Logo = ({ width = 40, height = 40 }) => {
   // Option 1: Gradient HF initials
@@ -143,8 +144,14 @@ const Logo = ({ width = 40, height = 40 }) => {
     </div>
   );
   
-  // Return Option 6 by default (HMF version of the geometric design)
-  return <LogoOption6 />;
+  // Use personal logo image by default
+  return (
+    <img 
+      src={personalLogo} 
+      alt="Personal Logo" 
+      style={{ width, height, objectFit: 'contain', display: 'block' }} 
+    />
+  );
 };
 
 export default Logo; 
