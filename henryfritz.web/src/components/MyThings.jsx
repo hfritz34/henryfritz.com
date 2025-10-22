@@ -23,10 +23,10 @@ const MyThings = () => {
       color: "#4CAF50"
     },
     album: {
-      name: "What The Feng",
-      artist: "Feng",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b273e9b4b33ac93a78e8e504c641",
-      spotifyUrl: "https://open.spotify.com/album/5asi6xhIro5qMzaEojet0l"
+      name: "Untrue",
+      artist: "Burial",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b27355018696782c175bdbaa3b5d",
+      spotifyUrl: "https://open.spotify.com/album/1iRPiEYHIX2zpF8lkW54SK"
     },
     artist: {
       name: "fakemink",
