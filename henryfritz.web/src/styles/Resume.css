@@ -8,14 +8,16 @@
   margin-bottom: 2rem;
   text-align: center;
   font-size: 2.5rem;
-  color: #fff;
+  color: #000000;
+  font-weight: 700;
 }
 
 .resume-content {
-  background: #fff;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .resume-download-link {
@@ -28,7 +30,7 @@
 }
 
 .resume-download-link a {
-  color: #64B5F6;
+  color: #000000;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -37,20 +39,23 @@
   display: inline-block;
   padding: 0.6rem 1.2rem;
   border-radius: 10px;
-  background: linear-gradient(135deg, #2dd4ff, #c084fc, #f472b6);
-  color: #fff !important;
+  background: #000000;
+  color: #ffffff !important;
   font-weight: 700;
-  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .resume-download-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(236, 72, 153, 0.35);
+  background: #ffffff;
+  color: #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .resume-download-link a:hover {
-  color: #3B82F6;
+  color: #333333;
 }
 
 @media (max-width: 768px) {

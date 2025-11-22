@@ -1,25 +1,12 @@
 /* Update the my-things container alignment */
 .my-things {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   background-color: transparent;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, rgba(196, 132, 252, 0.2), rgba(244, 114, 182, 0.1), transparent);
-  color: #fff;
+  color: #000000;
   width: 100%;
-  max-width: 1200px;
-  margin: 2rem auto;
+  max-width: 1400px;
+  margin: 0 auto;
   box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.my-things:hover {
-  transform: translateY(-4px);
-  border-image-source: linear-gradient(to right, rgba(196, 132, 252, 0.4), rgba(244, 114, 182, 0.2), transparent);
-  box-shadow: 0 8px 32px rgba(244, 114, 182, 0.05);
 }
 
 /* Add box-sizing to all elements to ensure proper sizing */
@@ -28,18 +15,12 @@
 }
 
 .my-things h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   text-align: center;
-  font-size: 2.5rem;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.my-things h2:hover {
-  transform: translateY(-2px);
-  color: #f472b6;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .things-container {
@@ -53,63 +34,22 @@
 
 .listening-section,
 .working-section {
-  background: linear-gradient(145deg, rgba(50,50,50,0.6), rgba(0,0,0,0.8));
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.1);
+  background: transparent;
+  padding: 2rem 0;
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
   box-sizing: border-box;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-}
-
-.listening-section::before,
-.working-section::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-  transform: rotate(0deg);
-}
-
-.listening-section:hover::before,
-.working-section:hover::before {
-  opacity: 1;
-  animation: 5s linear infinite;
-}
-
-
-
-.listening-section:hover,
-.working-section:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Change the heading alignment to left instead of center */
 .listening-section h3,
 .working-section h3 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: left;
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.listening-section:hover h3,
-.working-section:hover h3 {
-  color: #f472b6;
+  color: #000000;
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  opacity: 0.8;
 }
 
 .music-grid {
@@ -124,73 +64,36 @@
 }
 
 .music-item {
-  background: linear-gradient(145deg, rgba(40,40,40,0.7), rgba(0,0,0,0.85));
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.08);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  padding: 1rem;
   text-decoration: none;
-  color: #fff;
+  color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   height: 100%;
   box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-}
-
-.music-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(244, 114, 182, 0.05) 0%, transparent 50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.music-item:hover::before {
-  opacity: 1;
-}
-
-.music-item:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 2px 2px rgba(255,255,255,0.1);
 }
 
 .music-item h4 {
   margin-bottom: 1rem;
-  color: #f472b6;
+  color: #000000;
   font-size: 1.2rem;
   height: 1.5rem;
   position: relative;
   z-index: 1;
   transition: color 0.3s ease;
-}
-
-.music-item:hover h4 {
-  color: #c084fc;
+  font-weight: 600;
 }
 
 .music-item p {
   margin-top: 0.5rem;
   font-weight: 500;
-  color: #fff;
+  color: #333333;
   position: relative;
   z-index: 1;
   transition: color 0.3s ease;
-}
-
-.music-item:hover p {
-  color: #e0e0e0;
 }
 
 .music-image-container {
@@ -207,13 +110,10 @@
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .music-item:hover img {
-  box-shadow: 0 8px 32px rgba(244, 114, 182, 0.3);
-  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .music-info {
@@ -231,25 +131,17 @@
 .music-info .title {
   font-weight: 600;
   font-size: 1rem;
-  color: #fff;
+  color: #000000;
   margin: 0;
   transition: color 0.3s ease;
 }
 
-.music-item:hover .music-info .title {
-  color: #e0e0e0;
-}
-
 .music-info .artist-name {
-  color: #888;
+  color: #666666;
   font-size: 0.9rem;
   font-weight: 400;
   margin: 0.25rem 0 0 0;
   transition: color 0.3s ease;
-}
-
-.music-item:hover .music-info .artist-name {
-  color: #a0a0a0;
 }
 
 .play-overlay {
@@ -263,9 +155,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 8px;
-  backdrop-filter: blur(2px);
 }
 
 .music-image-container:hover .play-overlay {
@@ -275,19 +165,17 @@
 .play-icon {
   color: white;
   font-size: 2rem;
-  background: linear-gradient(135deg, rgba(244, 114, 182, 0.9), rgba(196, 132, 252, 0.9));
+  background: #000000;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .play-icon:hover {
-  transform: scale(1.1);
-  background: linear-gradient(135deg, rgba(196, 132, 252, 1), rgba(244, 63, 94, 1));
+  opacity: 0.8;
 }
 
 .spotify-player {
@@ -299,76 +187,35 @@
 
 .spotify-player iframe {
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease;
-}
-
-.spotify-player:hover iframe {
-  box-shadow: 0 8px 32px rgba(244, 114, 182, 0.2);
 }
 
 .project-display {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(244, 114, 182, 0.1);
-  padding: 2rem;
-  border-radius: 12px;
+  background: transparent;
+  padding: 2rem 0;
   margin-top: 1.5rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.project-display::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(244, 114, 182, 0.05) 0%, transparent 50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.project-display:hover::before {
-  opacity: 1;
-}
-
-.project-display:hover {
-  transform: translateY(-4px);
-  border-color: rgba(244, 114, 182, 0.3);
-  box-shadow: 0 16px 32px rgba(244, 114, 182, 0.2);
 }
 
 .project-display img {
   width: 300px;
   height: auto;
   border-radius: 8px;
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 1;
 }
 
 .project-display:hover img {
-  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 .project-image img {
-  width: 300px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 300px;
+  height: auto;
   border-radius: 8px;
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 1;
 }
 
 .current-project:hover .project-image img {
-  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 .project-info {
@@ -378,94 +225,49 @@
 }
 
 .project-info h4 {
-  color: #f472b6;
+  color: #000000;
   margin-bottom: 1rem;
   transition: color 0.3s ease;
-}
-
-.project-display:hover .project-info h4 {
-  color: #c084fc;
+  font-weight: 600;
 }
 
 .project-info p {
-  color: #fff;
+  color: #333333;
   transition: color 0.3s ease;
-}
-
-.project-display:hover .project-info p {
-  color: #e0e0e0;
 }
 
 .current-project {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background: linear-gradient(145deg, rgba(50,50,50,0.7), rgba(0,0,0,0.85));
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 2rem;
-  border-radius: 16px;
+  background: transparent;
+  padding: 2rem 0;
   margin-top: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.current-project::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(244, 114, 182, 0.05) 0%, transparent 50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.current-project:hover::before {
-  opacity: 1;
-}
-
-.current-project:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 2px 2px rgba(255,255,255,0.1);
 }
 
 .current-project .project-info h4 {
-  color: #f472b6;
+  color: #000000;
   margin-bottom: 1rem;
   transition: color 0.3s ease;
-  font-size: 1.5rem; /* Slightly larger heading */
-}
-
-.current-project:hover .project-info h4 {
-  color: #c084fc;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .current-project .project-info p {
-  color: #fff;
+  color: #333333;
   transition: color 0.3s ease;
-}
-
-.current-project:hover .project-info p {
-  color: #e0e0e0;
 }
 
 .view-project-button {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #f472b6, #c084fc);
-  color: white;
+  background: #000000;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 6px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  border: 2px solid #000000;
+  font-weight: 600;
 }
 
 /* Add space between the two action buttons */
@@ -473,59 +275,26 @@
   margin-left: 0.75rem;
 }
 
-.view-project-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.view-project-button:hover::before {
-  left: 100%;
-}
-
 .view-project-button:hover {
-  background: linear-gradient(135deg, #c084fc, #f43f5e);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(244, 114, 182, 0.4);
+  background: #ffffff;
+  color: #000000;
 }
 
 .project-link {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #f472b6, #c084fc);
-  color: white;
+  background: #000000;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 6px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.project-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.project-link:hover::before {
-  left: 100%;
+  border: 2px solid #000000;
+  font-weight: 600;
 }
 
 .project-link:hover {
-  background: linear-gradient(135deg, #c084fc, #f43f5e);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(244, 114, 182, 0.4);
+  background: #ffffff;
+  color: #000000;
 }
 
 /* Beat Visualizer alignment */
@@ -561,9 +330,7 @@
 
 @media (max-width: 768px) {
   .my-things {
-    padding: 2rem 1rem;
-    margin: 2rem 1rem;
-    width: calc(100% - 2rem);
+    padding: 4rem 2rem;
   }
   
   .music-grid {
@@ -746,9 +513,7 @@
 
 @media (max-width: 380px) {
   .my-things {
-    padding: 1.5rem 0.75rem;
-    margin: 1.5rem 0.5rem;
-    width: calc(100% - 1rem);
+    padding: 3rem 1rem;
   }
   
   .music-item {

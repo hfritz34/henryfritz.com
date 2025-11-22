@@ -89,10 +89,7 @@ p {
   font-size: var(--font-size-base);
 }
 
-.spotlight {
-  width: clamp(300px, 50vw, 600px);
-  height: clamp(300px, 50vw, 600px);
-}
+/* Spotlight removed - now using clean white background */
 
 /* About section fluid responsiveness */
 .about {
@@ -279,17 +276,11 @@ p {
 }
 
 /* Navigation fluid responsiveness */
-.navbar {
-  padding: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem) clamp(1rem, 0.8rem + 1vw, 2rem);
-  height: clamp(60px, 8vh, 70px);
-}
-
-.nav-links {
-  gap: clamp(1rem, 1.5vw, 2rem);
-}
-
-.nav-links li a {
-  font-size: var(--font-size-base);
+.menu-toggle-label {
+  position: fixed;
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
+  z-index: 1000;
 }
 
 /* Footer fluid responsiveness */

@@ -22,9 +22,9 @@ body {
 #root {
   width: 100%;
   max-width: 100%;
-  padding: 1rem;
+  padding: 0;
   overflow-x: hidden;
-  margin-top: 70px; /* Account for fixed navbar */
+  margin-top: 0;
 }
 
 .app {
@@ -37,7 +37,7 @@ body {
 @media (max-width: 768px) {
   #root {
     padding: 0;
-    margin-top: 60px; /* Smaller navbar on mobile */
+    margin-top: 0;
   }
 
   h1 {
@@ -75,14 +75,7 @@ body {
     padding: 0.7rem 1.5rem;
   }
 
-  .spotlight-effects {
-    overflow: hidden;
-  }
-
-  .spotlight {
-    width: 300px;
-    height: 300px;
-  }
+  /* Spotlight removed - now using clean white background */
 
   /* About section mobile fixes */
   .about {
@@ -104,7 +97,10 @@ body {
     line-height: 1.6;
   }
 
-  /* Experience section mobile fixes - removed, handled in Experience.css */
+  /* Experience section - no box styling */
+  .experience {
+    padding: 3rem 1rem;
+  }
 
   /* Projects section mobile fixes */
   .projects {
@@ -225,13 +221,9 @@ body {
     text-align: center;
   }
 
-  /* Navbar mobile fixes */
-  .navbar {
-    padding: 0.75rem 1rem;
-  }
-
-  .nav-links {
-    display: none;
+  /* Fullscreen menu mobile fixes */
+  .menu-toggle-label {
+    margin: 20px;
   }
 
   /* Footer mobile fixes */
@@ -359,15 +351,16 @@ body {
 /* Prevent horizontal scroll from wide elements */
 @media (max-width: 768px) {
   .hero-v2-grid,
-  .spotlight-effects,
   .contact-dots-backdrop {
     max-width: 100vw;
     overflow: hidden;
   }
 
   /* Fix any absolute positioned elements */
-  .bullet-h,
-  .bullet-v {
+  .comet-h-lr,
+  .comet-h-rl,
+  .comet-v-tb,
+  .comet-v-bt {
     max-width: 100vw;
   }
 
@@ -416,9 +409,10 @@ body {
     background-size: 50px 50px;
   }
 
-  /* Prevent bullets from causing overflow */
-  .bullet-h {
-    display: none; /* Hide horizontal bullets on mobile */
+  /* Prevent comets from causing overflow */
+  .comet-h-lr,
+  .comet-h-rl {
+    display: none; /* Hide horizontal comets on mobile */
   }
 
   /* Ensure contact backdrop doesn't overflow */

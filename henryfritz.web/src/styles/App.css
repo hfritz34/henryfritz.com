@@ -1,9 +1,12 @@
 #root {
-  max-width: min(100%, 1280px);
-  margin: 0 auto;
-  padding: clamp(1rem, 2vw, 2rem);
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   position: relative;
+}
+
+.app {
+  width: 100%;
 }
 
 .logo {
@@ -56,65 +59,24 @@
 
 /* Contact Section */
 .contact {
-  padding: clamp(3rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2rem);
-  max-width: 100%;
-  width: 100vw;
-  margin: 0;
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #fff;
+  color: #000000;
   text-align: center;
   position: relative;
+}
+
+/* Wave backdrop behind contact */
+.contact > * {
+  position: relative;
   z-index: 2;
-}
-
-/* Dotted pill backdrop behind contact */
-.contact-dots-backdrop {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  pointer-events: none;
-  width: 140vw;
-  height: clamp(260px, 36vw, 420px);
-  /* Soft radial fade, no boxy edges */
-  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 42%, rgba(0,0,0,0.25) 70%, transparent 92%);
-  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 42%, rgba(0,0,0,0.25) 70%, transparent 92%);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-backdrop-filter: saturate(120%) blur(3px);
-  backdrop-filter: saturate(120%) blur(3px);
-}
-
-.contact-dots-base {
-  position: absolute;
-  inset: 0;
-  background: transparent;
-}
-
-.contact-dots-grid {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px);
-  background-size: 22px 22px;
-  background-position: 8px 8px;
-  opacity: 0.5;
-}
-
-.contact-dots-depth {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 72%),
-    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 70%, transparent 100%);
-}
-
-.contact-dots-ring {
-  display: none;
 }
 
 /* Ensure contact text/content sits above backdrop */
@@ -125,9 +87,11 @@
 }
 
 .contact h2 {
-  margin-bottom: clamp(1.5rem, 3vw, 2rem);
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  color: #fff;
+  margin-bottom: 3rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .contact-info {
@@ -138,9 +102,10 @@
 }
 
 .contact-info p {
-  font-size: 1.1rem;
-  color: #ccc;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #000000;
   margin: 0;
+  opacity: 0.8;
 }
 
 .social-links {
@@ -152,29 +117,29 @@
 }
 
 .social-links a {
-  padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1.2rem, 2.5vw, 1.5rem);
-  background: linear-gradient(135deg, #f472b6, #c084fc);
-  color: white;
+  padding: 0.75rem 1.5rem;
+  background-color: #000000;
+  color: #ffffff;
   text-decoration: none;
-  border-radius: clamp(8px, 1.5vw, 12px);
-  font-weight: 500;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.08);
+  border-radius: 8px;
+  font-weight: 600;
+  border: 2px solid #000000;
 }
 
 .social-links a:hover {
-  background: linear-gradient(135deg, #c084fc, #f43f5e);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(244, 114, 182, 0.4);
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Footer */
 footer {
-  padding: clamp(1.5rem, 3vw, 2rem);
-  margin-top: clamp(1.5rem, 3vw, 2rem);
+  padding: 2rem;
+  margin-top: 2rem;
   text-align: center;
-  color: #888;
-  font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+  color: #000000;
+  font-size: 0.9rem;
+  background-color: transparent;
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {

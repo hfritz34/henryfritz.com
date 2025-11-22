@@ -1,37 +1,18 @@
 .projects {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-  background: linear-gradient(145deg, rgba(50,50,50,0.6), rgba(0,0,0,0.8));
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.1);
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.projects:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 2px 2px rgba(255,255,255,0.1);
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: transparent;
+  color: #000000;
 }
 
 .projects h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   text-align: center;
-  font-size: 2.5rem;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.projects h2:hover {
-  transform: translateY(-2px);
-  color: #f472b6;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .project-grid {
@@ -44,109 +25,39 @@
 }
 
 .project-card {
-  background: linear-gradient(145deg, rgba(40,40,40,0.7), rgba(0,0,0,0.85));
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
   padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.08);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   min-height: 450px;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-  transform: rotate(0deg);
-}
-
-.project-card:hover::before {
-  opacity: 1;
-  animation: rotate-glow 5s linear infinite;
-}
-
-@keyframes rotate-glow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 2px 2px rgba(255,255,255,0.1);
 }
 
 .project-card h3 {
   margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.project-card:hover h3 {
-  color: #f472b6;
+  color: #000000;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 600;
 }
 
 .project-card p {
-  color: #ccc;
+  color: #000000;
   margin-bottom: 1rem;
   line-height: 1.6;
-  transition: color 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.project-card:hover p {
-  color: #e0e0e0;
+  opacity: 0.8;
 }
 
 .project-card a {
-  color: #f472b6;
+  color: #000000;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: 600;
   margin-bottom: 2rem;
   display: inline-block;
-  position: relative;
-  z-index: 1;
-}
-
-.project-card a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #f472b6, #c084fc);
-  transition: width 0.3s ease;
-}
-
-.project-card a:hover::after {
-  width: 100%;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2px;
 }
 
 .project-card a:hover {
-  color: #c084fc;
-  transform: translateX(4px);
+  opacity: 0.6;
 }
 
 .project-content {
@@ -170,10 +81,7 @@
 
 .app-card {
   text-align: center;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 15px;
   padding: 1rem;
-  overflow: hidden;
   min-width: 140px;
   display: flex;
   flex-direction: column;
@@ -181,7 +89,7 @@
 }
 
 .app-card:hover {
-  transform: translateY(-8px) scale(1.05);
+  opacity: 0.8;
 }
 
 .app-logo {
@@ -191,24 +99,13 @@
   object-position: center;
   border-radius: 22px;
   margin-bottom: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.app-card:hover .app-logo {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
 }
 
 .app-name {
   font-size: 1.1rem;
-  color: #fff;
+  color: #000000;
   margin-top: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.app-card:hover .app-name {
-  color: #e0e0e0;
+  font-weight: 600;
 }
 
 .project-logo {
@@ -227,16 +124,10 @@
   border-radius: 35px;
   padding: 0;
   background: transparent;
-  backdrop-filter: none;
-  border: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-logo:hover {
-  transform: scale(1.08);
-  border-color: none;
-  box-shadow: none;
+  opacity: 0.8;
 } 
 
 @media (max-width: 768px) {
@@ -260,11 +151,12 @@
     display: inline-block;
     padding: 0.75rem 1.5rem;
     margin: 1rem auto;
-    background: linear-gradient(135deg, #f472b6, #c084fc);
-    color: white;
+    background: #000000;
+    color: #ffffff;
     border-radius: 8px;
     text-align: center;
     min-width: 150px;
+    border: 2px solid #000000;
   }
   
   .project-logo {

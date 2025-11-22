@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Logo from './Logo';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -14,29 +13,31 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
-      <a href="#home" className="navbar-logo-link">
-        <Logo width={50} height={50} />
-      </a>
-      <button 
-        className="mobile-menu-toggle"
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
-      >
-        <span className="hamburger-line"></span>
-        <span className="hamburger-line"></span>
-        <span className="hamburger-line"></span>
-      </button>
-      <ul className={`nav-links ${isMenuOpen ? 'nav-links-mobile' : ''}`}>
-        <li><a href="#home" onClick={closeMenu}>Home</a></li>
-        <li><a href="#about" onClick={closeMenu}>About</a></li>
-        <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-        <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-        <li><a href="#my-things" onClick={closeMenu}>My Things</a></li>
-        <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
-      </ul>
-    </nav>
+    <>
+      <input 
+        type="checkbox" 
+        id="menuToggle" 
+        checked={isMenuOpen}
+        onChange={toggleMenu}
+      />
+      <label htmlFor="menuToggle" className="menu-toggle-label">
+        <span className="bar top"></span>
+        <span className="bar middle"></span>
+        <span className="bar bottom"></span>
+      </label>
+
+      <aside className="fullscreen-menu">
+        <ul className="aside-list">
+          <li><a href="#home" className="aside-anchor" onClick={closeMenu}>Home</a></li>
+          <li><a href="#about" className="aside-anchor" onClick={closeMenu}>About</a></li>
+          <li><a href="#projects" className="aside-anchor" onClick={closeMenu}>Projects</a></li>
+          <li><a href="#skills" className="aside-anchor" onClick={closeMenu}>Skills</a></li>
+          <li><a href="#my-things" className="aside-anchor" onClick={closeMenu}>My Things</a></li>
+          <li><a href="#contact" className="aside-anchor" onClick={closeMenu}>Contact</a></li>
+        </ul>
+      </aside>
+    </>
   );
 };
 
-export default Navbar; 
+export default Navbar;

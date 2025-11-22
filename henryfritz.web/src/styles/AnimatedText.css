@@ -22,25 +22,15 @@
 }
 
 .animated-text {
-  background: linear-gradient(
-    90deg,
-    #2dd4ff 0%,
-    #3b82f6 20%,
-    #c084fc 40%,
-    #f472b6 60%,
-    #f43f5e 80%,
-    #2dd4ff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000000;
   display: inline-block;
   min-height: 5rem;
   position: relative;
+  font-weight: 700;
 }
 
 .custom-cursor {
-  color: #f472b6;
+  color: #000000;
   font-weight: 400;
   font-size: 1em;
   margin-left: 6px;
@@ -52,14 +42,14 @@
   font-size: 5rem;
   font-weight: 800;
   margin: 0;
-  color: #ffffff;
+  color: #000000;
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
   animation-delay: 0.3s;
 }
 
 .hero-text {
-  color: #a0a0a0;
+  color: #333333;
   font-size: 1.5rem;
   margin-top: 0.5rem;
   font-weight: 400;
@@ -107,14 +97,14 @@
 .animated-text .cursor,
 .animated-text::after,
 .animated-text > .cursor {
-  color: #f472b6 !important;
+  color: #000000 !important;
   font-weight: 400 !important;
 }
 
 /* Alternative approach - target any element that might be the cursor */
 .animated-text-container [class*="cursor"],
 .animated-text-container [data-cursor="true"] {
-  color: #f472b6 !important;
+  color: #000000 !important;
 } 
 
 @media (max-width: 768px) {

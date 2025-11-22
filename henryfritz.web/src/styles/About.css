@@ -1,22 +1,43 @@
 .about {
-  padding: 4rem 2rem;
-  max-width: 100%;
-  width: 100vw;
-  margin: 0;
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 4rem;
   background: transparent;
-  color: #fff;
-  position: relative;
-  z-index: 2;
+  color: #000000;
 }
 
 .about-content {
-  width: 100%;
+  flex: 1;
   text-align: left;
-  max-width: 1200px;
+  max-width: 600px;
+}
+
+.about-github {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-github a {
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.about-github a:hover {
+  opacity: 0.7;
+}
+
+.about-github img {
+  width: 200px;
+  height: auto;
+  display: block;
 }
 
 .headshot {
@@ -24,36 +45,28 @@
   height: 250px;
   object-fit: cover;
   border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
-}
-
-.headshot:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .about h2 {
   margin-bottom: 1.5rem;
-  font-size: 2.5rem;
-  color: #fff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #000000;
+  font-weight: 700;
 }
 
-
 .about p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.8;
-  color: #ccc;
-  margin-bottom: 1.5rem;
+  color: #000000;
+  margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
     text-align: center;
-    padding: 3rem 2rem;
-    gap: 2rem;
+    padding: 4rem 2rem;
+    gap: 3rem;
   }
 
   .about-content {
@@ -61,7 +74,7 @@
     max-width: 100%;
   }
   
-  .about-image {
-    flex: none;
+  .about-github img {
+    width: 150px;
   }
 } 
