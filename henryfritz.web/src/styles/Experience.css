@@ -47,6 +47,16 @@
   height: clamp(65px, 10vw, 110px);
 }
 
+/* Make Domum Gym logo slightly bigger */
+.logo-bottom-left img {
+  height: clamp(90px, 13vw, 160px);
+}
+
+/* Make NowLab logo bigger */
+.logo-bottom-right img {
+  height: clamp(120px, 16vw, 220px);
+}
+
 .logo-item:hover img {
   opacity: 1;
 }

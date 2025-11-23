@@ -4,7 +4,7 @@ import BeatVisualizer from './BeatVisualizer';
 // import RecentlyLikedSongs from './RecentlyLikedSongs'; // temporarily hidden while Prestige API is down
 import newPrestige from '../assets/PRESTIGED.png'
 import prestigeLogo from '../assets/prestige_logo.png';
-import ventusLogo from '../assets/ventus_offwhite.png';
+import ventusLogo from '../assets/ventus _black.png';
 import gamgeeLogo from '../assets/gamgee_rounded.png';
 
 const MyThings = () => {
