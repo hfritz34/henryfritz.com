@@ -4,6 +4,8 @@ import BeatVisualizer from './BeatVisualizer';
 // import RecentlyLikedSongs from './RecentlyLikedSongs'; // temporarily hidden while Prestige API is down
 import newPrestige from '../assets/PRESTIGED.png'
 import prestigeLogo from '../assets/prestige_logo.png';
+import ventusLogo from '../assets/ventus_offwhite.png';
+import gamgeeLogo from '../assets/gamgee_rounded.png';
 
 const MyThings = () => {
   const [showPlayer, setShowPlayer] = useState(false);
@@ -122,6 +124,8 @@ const MyThings = () => {
         {/* What I'm Working On */}
         <div className="working-section">
           <h3>What I'm Building</h3>
+          
+          {/* Prestige */}
           <div className="current-project">
             <div className="project-image">
               <img src={prestigeLogo} alt="Current Project - Prestige" />
@@ -149,6 +153,71 @@ const MyThings = () => {
                     className="view-project-button"
                   >
                     View Website
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Ventus */}
+          <div className="current-project">
+            <div className="project-image">
+              <img src={ventusLogo} alt="Current Project - Ventus" />
+            </div>
+            <div className="project-info">
+              <div className="project-header">
+               
+              </div>
+              <div className="project-details">
+                <div className="project-name-container">
+                  <h4>Ventus</h4>
+                  <p>Smart Alarm + AI Verification App Built for Consistency and Discipline</p>
+                  <a 
+                    href="https://github.com/hfritz34/Ventus?tab=readme-ov-file" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="view-project-button"
+                  >
+                    View Project
+                  </a>
+                  <a 
+                    href="#" 
+                    className="view-project-button disabled"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Mobile Coming Soon
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Gamgee */}
+          <div className="current-project">
+            <div className="project-image">
+              <img src={gamgeeLogo} alt="Current Project - Gamgee" />
+            </div>
+            <div className="project-info">
+              <div className="project-header">
+               
+              </div>
+              <div className="project-details">
+                <div className="project-name-container">
+                  <h4>Gamgee</h4>
+                  <p>A Quiet, Privacy-First Companion That Watches Your Tech When You Can't</p>
+                  <a 
+                    href="#" 
+                    className="view-project-button disabled"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Refining...
+                  </a>
+                  <a 
+                    href="#" 
+                    className="view-project-button disabled"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Desktop App Coming Soon
                   </a>
                 </div>
               </div>

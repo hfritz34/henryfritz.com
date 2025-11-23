@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Experience.css';
 import aigLogo from '../assets/aig_blue.png';
 import ibmLogo from '../assets/ibm-logo-transparent.png';
-import ohioStateLogo from '../assets/Ohio_State_Buckeyes_logo.svg.png';
+import ohioStateLogo from '../assets/ohio_state_nowlab.png';
 import domumLogo from '../domum_gym.png';
 
 const Experience = () => {
