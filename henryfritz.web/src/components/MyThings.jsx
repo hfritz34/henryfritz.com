@@ -18,22 +18,22 @@ const MyThings = () => {
   // Hardcoded current listening data
   const currentlyListening = {
     song: {
-      name: "soiree (take 3)",
-      artist: "haruka nakamura",
-      id: "3bWGtFi2w2N7FhX2i5BBb5",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b27385da2c95bdf3ce3628dbc9d5",
+      name: "White Ash",
+      artist: "9090gate",
+      id: "1EpXnxD17xHhSvOI31c60H",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b27330fda2ca5886577fe2b481bb",
       color: "#4CAF50"
     },
     album: {
-      name: "Untrue",
-      artist: "Burial",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b27355018696782c175bdbaa3b5d",
-      spotifyUrl: "https://open.spotify.com/album/1iRPiEYHIX2zpF8lkW54SK"
+      name: "Icedancer",
+      artist: "Bladee",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b2737e041a457bd312e73440532a",
+      spotifyUrl: "https://open.spotify.com/album/0cT1SQDE7wSh1eUJkGFXse"
     },
     artist: {
-      name: "fakemink",
-      imageUrl: "https://i.scdn.co/image/ab6761610000e5eb6c22ee1a94a0fa6196089629",
-      spotifyUrl: "https://open.spotify.com/artist/0qc4BFxcwRFZfevTck4fOi"
+      name: "Lucy Bedroque",
+      imageUrl: "https://i.scdn.co/image/ab6761610000e5eb46d54cd46ec87c6838c9f0d5",
+      spotifyUrl: "https://open.spotify.com/artist/2I8H267eH5va9da4vGt38O"
     }
   };
 
