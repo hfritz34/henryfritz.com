@@ -18,10 +18,10 @@ const MyThings = () => {
   // Hardcoded current listening data
   const currentlyListening = {
     song: {
-      name: "White Ash",
-      artist: "9090gate",
-      id: "1EpXnxD17xHhSvOI31c60H",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b27330fda2ca5886577fe2b481bb",
+      name: "backseat",
+      artist: "Fred again..",
+      id: "61pyjiweMDS1h930OgS0XO",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b2736b8a4828e057b7dc1c4a4d39",
       color: "#4CAF50"
     },
     album: {
