@@ -148,6 +148,17 @@ body {
   .app-name {
     font-size: 0.95rem;
   }
+  
+  /* iOS app card links - no button styling */
+  .app-card a {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: auto !important;
+    color: #000000 !important;
+  }
 
   /* Skills section mobile fixes */
   .skills {

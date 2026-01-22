@@ -108,6 +108,24 @@
   font-weight: 600;
 }
 
+/* iOS app card links should NOT have button styling */
+.app-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  min-width: auto;
+}
+
+.app-card a:hover {
+  opacity: 0.8;
+  background: transparent;
+}
+
 .project-logo {
   margin-top: auto;
   display: flex;
@@ -141,13 +159,16 @@
   .project-card h3 {
     text-align: center;
     width: 100%;
+    order: 1;
   }
   
   .project-card p {
     text-align: center;
+    order: 2;
   }
   
-  .project-card a {
+  /* Direct link button - appears below carousel/icons */
+  .project-card > a {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     margin: 1rem auto;
@@ -157,6 +178,13 @@
     text-align: center;
     min-width: 150px;
     border: 2px solid #000000;
+    order: 4;
+  }
+  
+  /* Carousel container appears after description, before button */
+  .project-card .carousel-container {
+    order: 3;
+    width: 100%;
   }
   
   .project-logo {
@@ -172,6 +200,7 @@
     height: 150px;
   }
   
+  /* iOS apps section - no button styling for these links */
   .ios-apps {
     display: flex;
     justify-content: center;
@@ -179,12 +208,33 @@
     gap: 1.5rem;
     margin-top: 1.5rem;
     flex-wrap: wrap;
+    order: 3;
   }
   
   .app-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: transparent;
+  }
+  
+  /* Override button styling for iOS app links */
+  .app-card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background: transparent !important;
+    color: #000000;
+    border: none !important;
+    border-radius: 0;
+    min-width: auto;
+  }
+  
+  .app-card a:hover {
+    background: transparent !important;
+    opacity: 0.8;
   }
   
   .app-logo {
@@ -196,7 +246,7 @@
 }
 
 @media (max-width: 600px) {
-  .project-card a {
+  .project-card > a {
     padding: 0.6rem 1.2rem;
     font-size: 0.95rem;
     min-width: 130px;
@@ -216,6 +266,14 @@
     height: 80px;
     object-fit: cover;
     object-position: center;
+  }
+  
+  /* Ensure app card links remain unstyled as buttons */
+  .app-card a {
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+    min-width: auto;
   }
 }
 
@@ -238,5 +296,13 @@
   
   .ios-apps {
     gap: 0.75rem;
+  }
+  
+  /* Ensure app card links remain unstyled as buttons */
+  .app-card a {
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+    min-width: auto;
   }
 } 

@@ -119,6 +119,51 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+/* Mobile carousel adjustments */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 1.5rem 0;
+  }
+  
+  .carousel {
+    height: 180px;
+  }
+  
+  .carousel-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 25px;
+  }
+  
+  .carousel-image.left {
+    transform: translateX(-100px) scale(0.75);
+  }
+  
+  .carousel-image.right {
+    transform: translateX(100px) scale(0.75);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 160px;
+  }
+  
+  .carousel-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+  }
+  
+  .carousel-image.left {
+    transform: translateX(-80px) scale(0.7);
+  }
+  
+  .carousel-image.right {
+    transform: translateX(80px) scale(0.7);
+  }
+}
+
 /* Add subtle cursor indicators */
 .carousel::before,
 .carousel::after {

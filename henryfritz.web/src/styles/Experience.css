@@ -49,12 +49,12 @@
 
 /* Make Domum Gym logo slightly bigger */
 .logo-bottom-left img {
-  height: clamp(90px, 13vw, 160px);
+  height: clamp(110px, 15vw, 190px);
 }
 
 /* Make NowLab logo bigger */
 .logo-bottom-right img {
-  height: clamp(120px, 16vw, 220px);
+  height: clamp(140px, 18vw, 260px);
 }
 
 .logo-item:hover img {
@@ -75,6 +75,16 @@
   .logo-grid {
     gap: clamp(2rem, 6vw, 4rem) clamp(2rem, 6vw, 4rem);
   }
+  
+  /* Domum Gym bigger on mobile */
+  .logo-bottom-left img {
+    height: clamp(90px, 22vw, 140px);
+  }
+  
+  /* NowLab bigger on mobile */
+  .logo-bottom-right img {
+    height: clamp(110px, 26vw, 180px);
+  }
 }
 
 @media (max-width: 480px) {
@@ -89,5 +99,15 @@
   
   .logo-grid {
     gap: clamp(1.5rem, 5vw, 3rem) clamp(1.5rem, 5vw, 3rem);
+  }
+  
+  /* Domum Gym on small mobile */
+  .logo-bottom-left img {
+    height: clamp(75px, 20vw, 110px);
+  }
+  
+  /* NowLab on small mobile */
+  .logo-bottom-right img {
+    height: clamp(95px, 24vw, 140px);
   }
 } 

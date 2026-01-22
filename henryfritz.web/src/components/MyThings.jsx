@@ -18,11 +18,11 @@ const MyThings = () => {
   // Hardcoded current listening data
   const currentlyListening = {
     song: {
-      name: "Imaginary Folklore",
-      artist: "clammbon, Nujabes",
-      id: "7xNpCuqDKASx2f64nkhzNm",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b273b272e55a046e153084ad6d6b",
-      color: "#D4A574"
+      name: "backseat",
+      artist: "Fred again..",
+      id: "61pyjiweMDS1h930OgS0XO",
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b2736b8a4828e057b7dc1c4a4d39",
+      color: "#4CAF50"
     },
     album: {
       name: "Icedancer",
