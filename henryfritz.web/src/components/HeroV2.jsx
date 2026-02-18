@@ -6,7 +6,7 @@ const HeroV2 = () => {
     <section className="hero-v2">
       <div className="hero-v2-container">
         <h1>
-          Hi, I'm Henry
+          Henry Fritz
           <span>Software Engineer | Student at The Ohio State University</span>
         </h1>
       </div>

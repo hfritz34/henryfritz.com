@@ -5,7 +5,7 @@ import '../styles/AnimatedText.css';
 const AnimatedText = () => {
   return (
     <div className="animated-text-container">
-      <h1 className="name-text">Hi, I'm Henry</h1>
+      <h1 className="name-text">Henry Fritz</h1>
       <div className="text-with-cursor">
         <TypeAnimation
           sequence={[
