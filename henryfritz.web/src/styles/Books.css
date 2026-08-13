@@ -1,0 +1,89 @@
+.books-page {
+  background: #08080a;
+  color: #f2f0f5;
+  min-height: 100vh;
+}
+
+.books-header {
+  position: relative;
+  padding: 96px 48px 32px;
+}
+
+.books-header h1 {
+  margin: 0;
+  font-weight: 900;
+  font-size: clamp(28px, 5vw, 40px);
+  letter-spacing: -0.01em;
+}
+
+.books-list {
+  padding: 0 48px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 640px;
+}
+
+.book-card {
+  display: flex;
+  gap: 18px;
+  padding: 18px;
+  border: 1.5px solid rgba(242, 240, 245, 0.18);
+}
+
+.book-cover {
+  width: 56px;
+  height: 80px;
+  flex: none;
+  border: 1.5px solid rgba(242, 240, 245, 0.18);
+  background: rgba(242, 240, 245, 0.05);
+}
+
+.book-info h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.book-author {
+  margin: 2px 0 0;
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+.book-rating {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.book-rating .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(242, 240, 245, 0.35);
+}
+
+.book-rating .dot.filled {
+  background: #a78bfa;
+  border-color: #a78bfa;
+}
+
+.book-verdict {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .books-header,
+  .books-list {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .book-card {
+    flex-direction: column;
+  }
+}
