@@ -83,7 +83,24 @@
     padding-right: 24px;
   }
 
+  .books-header {
+    padding-top: 72px;
+  }
+
   .book-card {
     flex-direction: column;
+  }
+
+  .book-cover {
+    width: 64px;
+    height: 92px;
+  }
+}
+
+@media (max-width: 420px) {
+  .books-header,
+  .books-list {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
