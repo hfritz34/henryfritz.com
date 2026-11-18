@@ -40,7 +40,7 @@ const PROJECTS = [
   {
     name: 'Celeste Clone',
     description: 'C# / MonoGame platformer',
-    href: 'https://github.com/hfritz34/celeste-clone',
+    href: 'https://github.com/hfritz34/celeste-monogame',
     video: { webm: celesteWebm, mp4: celesteMp4, poster: celestePoster },
   },
   {
