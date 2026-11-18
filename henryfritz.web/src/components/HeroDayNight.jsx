@@ -63,7 +63,10 @@ function grid(w, h, C) {
     };
   }
 
-const setupCycleWith = (opts = {}) => ({ w, h, mouse, g }) => {
+const setupCycleWith = (opts = {}) => ({ w, h, mouse, g, seed = 1 }) => {
+    // Seeded randomness: a resize rebuilds the scene, and the same seed keeps stars, flowers and clouds in place.
+    const hr = (x, y, k) => { let v = Math.imul(x, 374761393) ^ Math.imul(y, 668265263) ^ Math.imul(k + 1, 1442695041) ^ seed; v = Math.imul(v ^ (v >>> 13), 1274126177); v ^= v >>> 16; return (v >>> 0) / 4294967296; };
+    let rs = seed >>> 0; const rnd = () => { rs = (rs + 0x6D2B79F5) >>> 0; let z = rs; z = Math.imul(z ^ (z >>> 15), z | 1); z ^= z + Math.imul(z ^ (z >>> 7), z | 61); return ((z ^ (z >>> 14)) >>> 0) / 4294967296; };
     const lay = opts.layout || 'orig';
     const C = g.C, cols = g.cols, rows = g.rows, n = cols * rows, noise = perlinFactory();
     const HR = Math.round(rows * 0.58), HY = HR * C, CYCLE = opts.cycle || 60;
@@ -112,16 +115,16 @@ const setupCycleWith = (opts = {}) => ({ w, h, mouse, g }) => {
     };
     const kind = new Uint8Array(n), band = new Uint8Array(n), edge = new Uint8Array(n), star = new Uint8Array(n), ph = new Float32Array(n), flower = new Int8Array(n).fill(-1);
     for (let cy = 0; cy < rows; cy++) for (let cx = 0; cx < cols; cx++) {
-      const i = cy * cols + cx; ph[i] = Math.random() * 6.28;
-      if (cy < HR) { if (Math.random() < 0.028) star[i] = 1 + ((Math.random() * 3) | 0); continue; }
+      const i = cy * cols + cx; ph[i] = hr(cx, cy, 0) * 6.28;
+      if (cy < HR) { if (hr(cx, cy, 1) < 0.028) star[i] = 1 + ((hr(cx, cy, 2) * 3) | 0); continue; }
       const bt = bankTop(cx);
-      if ((lay !== 'orig' || cx / cols > 0.54) && cy >= bt) { kind[i] = 5; band[i] = Math.max(0, 3 - Math.floor((cy - bt) / 2)); if (cy === Math.ceil(bt)) edge[i] = 1; if (Math.random() < 0.06 && cy > bt + 1) flower[i] = (Math.random() * 4) | 0; continue; }
+      if ((lay !== 'orig' || cx / cols > 0.54) && cy >= bt) { kind[i] = 5; band[i] = Math.max(0, 3 - Math.floor((cy - bt) / 2)); if (cy === Math.ceil(bt)) edge[i] = 1; if (hr(cx, cy, 3) < 0.06 && cy > bt + 1) flower[i] = (hr(cx, cy, 4) * 4) | 0; continue; }
       const v = cy - HR + 1, depth = v / (rows - HR);
       const nn = noise(cx * (0.055 - depth * 0.035) + 3, Math.log(v + 1) * 2.6 + 7);
       const thr = 0.44 + depth * 0.1 - (v < 3 ? 0.35 : 0);
       kind[i] = nn > thr ? 3 : 4;
       band[i] = Math.min(3, Math.max(0, Math.floor((nn - thr) * 14 + depth * 1.5)));
-      if (kind[i] === 3 && Math.random() < 0.035) flower[i] = (Math.random() * 4) | 0;
+      if (kind[i] === 3 && hr(cx, cy, 5) < 0.035) flower[i] = (hr(cx, cy, 6) * 4) | 0;
     }
     for (let cy = HR + 1; cy < rows - 1; cy++) for (let cx = 0; cx < cols; cx++) {
       const i = cy * cols + cx; if (kind[i] !== 3) continue;
@@ -132,12 +135,12 @@ const setupCycleWith = (opts = {}) => ({ w, h, mouse, g }) => {
     const FAM = [['#ffd23f', '#ff9f1c'], ['#5ee08a', '#c4ff7a'], ['#5aa9ff', '#9fe4ff'], ['#c084fc', '#ff8ad8'], ['#ff7a59', '#ffd0a0']];
     const SKIN = hx('#f4c9a0'), DARK = hx('#0e1638'), WHITE = [255, 255, 255];
     const TREE = { cx: Math.round(cols * 0.93), cy: Math.round(bankTop(Math.round(cols * 0.93))) };
-    const birds = []; for (let k = 0; k < 4; k++) birds.push({ x: Math.random() * w, y: HY * (0.2 + Math.random() * 0.3), s: 0.35 + Math.random() * 0.25, p: Math.random() * 6 });
-    const flies = []; for (let k = 0; k < 18; k++) flies.push({ x: Math.random() * w, y: HY + Math.random() * (h - HY) * 0.6, p: Math.random() * 6, vx: 0, vy: 0 });
+    const birds = []; for (let k = 0; k < 4; k++) birds.push({ x: rnd() * w, y: HY * (0.2 + rnd() * 0.3), s: 0.35 + rnd() * 0.25, p: rnd() * 6 });
+    const flies = []; for (let k = 0; k < 18; k++) flies.push({ x: rnd() * w, y: HY + rnd() * (h - HY) * 0.6, p: rnd() * 6, vx: 0, vy: 0 });
     const rockets = [], bursts = [], sparks = [], falls = [], glows = [], ripples = [];
     let skip = 0, flash = 0, nextLaunch = 1.5, nextFall = 0;
-    const PH0 = 0.24, SEED = Math.random() * 100, SEED2 = Math.random() * 100;
-    const flocks = []; let nextFlock = 1 + Math.random() * 3;
+    const PH0 = 0.24, SEED = rnd() * 100, SEED2 = rnd() * 100;
+    const flocks = []; let nextFlock = 1 + rnd() * 3;
     const bz = (fl, p) => { const u = 1 - p; return { x: u * u * fl.sx + 2 * u * p * fl.cx + p * p * fl.lx, y: u * u * fl.sy + 2 * u * p * fl.cy + p * p * fl.ly }; };
     const rayCh = a => { const d = ((a % Math.PI) + Math.PI) % Math.PI; return d < 0.39 || d > 2.75 ? '-' : d < 1.18 ? '\\' : d < 1.96 ? '|' : '/'; };
     const drawFx = (t, y0, y1) => {
@@ -348,15 +351,18 @@ export default function HeroDayNight({ cell = 8, clickToSkip = false, className,
     if (!canvas) return;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let raf = 0, visible = true, frame = null, g = null, ctx = null, t = 0, w = 0, h = 0;
+    const seed = (Math.random() * 4294967296) >>> 0; // fixed for this mount so resizes don't re-roll the scene
     const mouse = { x: -999, y: -999, clicks: [] };
     const build = () => {
       const dpr = Math.min(2, window.devicePixelRatio || 1);
-      w = canvas.clientWidth; h = canvas.clientHeight;
-      if (!w || !h) return false;
+      const nw = canvas.clientWidth, nh = canvas.clientHeight;
+      if (!nw || !nh) return false;
+      if (frame && nw === w && nh === h) return true; // e.g. mobile URL bar: nothing to redo
+      w = nw; h = nh;
       canvas.width = w * dpr; canvas.height = h * dpr;
       ctx = canvas.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       g = grid(w, h, cell);
-      frame = setupCycle({ ctx, w, h, mouse, g });
+      frame = setupCycle({ ctx, w, h, mouse, g, seed });
       return true;
     };
     const tick = () => {
@@ -367,18 +373,19 @@ export default function HeroDayNight({ cell = 8, clickToSkip = false, className,
     };
     const onDown = () => { if (clickToSkip) mouse.clicks.push({}); };
     canvas.addEventListener('pointerdown', onDown);
-    let rt = 0;
-    const onResize = () => { clearTimeout(rt); rt = setTimeout(build, 150); };
-    window.addEventListener('resize', onResize);
+    // Rebuild before the next paint (ResizeObserver fires pre-paint), so the canvas never shows a stretched bitmap.
+    const ro = new ResizeObserver(() => {
+      const prev = frame;
+      if (build() && frame !== prev) { g.clear(); frame(t); g.draw(ctx); }
+    });
+    ro.observe(canvas);
     const io = new IntersectionObserver(([e]) => { visible = e.isIntersecting; });
     io.observe(canvas);
-    if (build()) {
-      if (reduced) { t = 8; g.clear(); frame(t); g.draw(ctx); }
-      else tick();
-    }
+    if (reduced) t = 8; // single static frame; the ResizeObserver redraws it on resize
+    if (build() && reduced) { g.clear(); frame(t); g.draw(ctx); }
+    if (!reduced) tick(); // tick waits for a successful build, so a zero-size first mount still starts
     return () => {
-      cancelAnimationFrame(raf); clearTimeout(rt); io.disconnect();
-      window.removeEventListener('resize', onResize);
+      cancelAnimationFrame(raf); ro.disconnect(); io.disconnect();
       canvas.removeEventListener('pointerdown', onDown);
     };
   }, [cell, clickToSkip]);
