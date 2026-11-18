@@ -177,6 +177,7 @@ const setupCycleWith = (opts = {}) => ({ w, h, mouse, g }) => {
     };
     const glowG = ['#4fd08a', '#8ff5c0', '#d8fff0'];
     const glowAt = (px, py) => { let best = 0; for (const gl of glows) { const dx = px - gl.x, dy = (py - gl.y) * 2.4, v = Math.max(0, 1 - Math.sqrt(dx * dx + dy * dy) / 110) * gl.life; if (v > best) best = v; } return best; };
+    let lightXs = null; // eased light position, so the lit side glides instead of teleporting
     return t => {
       while (mouse.clicks.length) { mouse.clicks.shift(); skip += 0.12; }
       const phase = (PH0 + t / CYCLE + skip) % 1, P = palAt(phase), L = P.L, NI = P.N;
@@ -221,7 +222,7 @@ const setupCycleWith = (opts = {}) => ({ w, h, mouse, g }) => {
       let lightX = w / 2, sun = null, moon = null;
       if (sArc < 1) { sun = { x: w * (0.1 + 0.8 * sArc), y: HY - Math.sin(sArc * Math.PI) * HY * 0.82 + 14 }; lightX = sun.x; }
       if (mArc < 1) { moon = { x: w * (0.15 + 0.7 * mArc), y: HY - Math.sin(mArc * Math.PI) * HY * 0.78 + 30 }; if (!sun) lightX = moon.x; }
-      const lightLeft = lightX < w / 2;
+      lightXs = lightXs === null ? lightX : lightXs + (lightX - lightXs) * 0.02;
 
       for (let cy = 0; cy < HR; cy++) for (let cx = 0; cx < cols; cx++) {
         const i = cy * cols + cx, v = cy / HR * 5.6 + (B4[(cy % 4) * 4 + (cx % 4)] / 16 - 0.5) * 1.1, idx = Math.max(0, Math.min(5, Math.floor(v)));
@@ -262,7 +263,7 @@ const setupCycleWith = (opts = {}) => ({ w, h, mouse, g }) => {
       for (let cy = 1; cy < CR; cy++) for (let cx = 0; cx < cols; cx++) {
         const v = cf[cy * cols + cx]; if (v <= 0.56) continue;
         const top = cf[(cy - 1) * cols + cx] <= 0.56, bot = cf[(cy + 1) * cols + cx] <= 0.56;
-        const sideLit = lightLeft ? cf[cy * cols + Math.max(0, cx - 2)] <= 0.56 : cf[cy * cols + Math.min(cols - 1, cx + 2)] <= 0.56;
+        const sideLit = lightXs < cx * C ? cf[cy * cols + Math.max(0, cx - 2)] <= 0.56 : cf[cy * cols + Math.min(cols - 1, cx + 2)] <= 0.56;
         const px = cx * C, py = cy * C;
         g.setBg(px, py, v > 0.64 || sideLit || top ? P.clBg : P.csBg);
         if (top) g.put(px, py, '-', P.cr, 1, true);
@@ -285,7 +286,7 @@ const setupCycleWith = (opts = {}) => ({ w, h, mouse, g }) => {
       for (let cy = 0; cy < HR; cy++) for (let cx = 0; cx < cols; cx++) {
         const lyr = cy >= hn[cx] ? 2 : cy >= hm[cx] ? 1 : cy >= hf[cx] ? 0 : -1; if (lyr < 0) continue;
         const hh = lyr === 2 ? hn : lyr === 1 ? hm : hf, px = cx * C, py = cy * C;
-        const s = hh[Math.min(cols - 1, cx + 1)] - hh[Math.max(0, cx - 1)], lit = lightLeft ? s < 0 : s > 0;
+        const s = hh[Math.min(cols - 1, cx + 1)] - hh[Math.max(0, cx - 1)], lit = lightXs < px ? s < 0 : s > 0;
         const Lc = lyr === 2 ? P.nl : lyr === 1 ? P.ml : P.fl, Sc = lyr === 2 ? P.ns : lyr === 1 ? P.ms : P.fs;
         const snowy = lyr === 0 && cy - hh[cx] < 3.5 && hh[cx] < HR - 30;
         g.setBg(px, py, snowy && lit ? P.snBg : lit ? (lyr === 2 ? P.nlBg : lyr === 1 ? P.mlBg : P.flBg) : (lyr === 2 ? P.nsBg : lyr === 1 ? P.msBg : P.fsBg));
@@ -324,7 +325,7 @@ const setupCycleWith = (opts = {}) => ({ w, h, mouse, g }) => {
         const R = 4.2, ccy = T.cy - 3 - R;
         for (let dy = -R; dy <= R; dy++) for (let dx = -R * 1.2; dx <= R * 1.2; dx++) {
           const d = Math.hypot(dx / 1.2, dy); if (d > R) continue;
-          const lt = (lightLeft ? -dx : dx) * 0.6 - dy * 0.8 > 0.4;
+          const lt = (lightXs < T.cx * C ? -dx : dx) * 0.6 - dy * 0.8 > 0.4;
           g.put((T.cx + Math.round(dx)) * C, Math.round(ccy + dy) * C, d > R - 0.8 ? (dy < 0 ? '^' : 'w') : lt ? '%' : '#', lt ? P.gr[3] : P.gr[1], 0.95, true);
         }
       }
