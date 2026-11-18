@@ -21,15 +21,10 @@
   },
   "globalHeaders": {
     "cache-control": "no-cache",
-    "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https://open.spotify.com https://accounts.spotify.com; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:; frame-src 'self' https://open.spotify.com; object-src 'self'; plugin-types application/pdf;",
+    "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:; frame-src 'self'; object-src 'self'; plugin-types application/pdf;",
     "X-Content-Type-Options": "nosniff"
   },
   "routes": [
-    {
-      "route": "/callback",
-      "serve": "/index.html",
-      "statusCode": 200
-    },
     {
       "route": "/assets/*",
       "headers": {
@@ -50,4 +45,4 @@
       "statusCode": 200
     }
   ]
-} 
+}
