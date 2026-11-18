@@ -42,8 +42,15 @@ function App() {
   }, []);
 
   return (
-    <div className="home">
+    <div className="home" id="top">
       <section className="hero">
+        <nav className="hero-nav">
+          <a href="#top" className="wordmark">henry fritz</a>
+          <div className="hero-nav-links">
+            <a href="#top" className="active">home</a>
+            <a href="#contact">contact</a>
+          </div>
+        </nav>
         <div ref={fieldRef} className="hero-field">
           <HeroDayNight />
         </div>
