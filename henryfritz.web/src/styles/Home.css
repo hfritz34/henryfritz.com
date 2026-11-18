@@ -22,11 +22,8 @@
 
 .hero-title {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  left: 48px;
+  bottom: 56px;
   pointer-events: none;
   transition: opacity 0.12s linear;
 }
@@ -38,6 +35,7 @@
   line-height: 1;
   letter-spacing: -0.02em;
   color: #f2f0f5;
+  text-shadow: 3px 3px 0 #08080a;
 }
 
 .about {
@@ -195,6 +193,11 @@
 }
 
 @media (max-width: 720px) {
+  .hero-title {
+    left: 24px;
+    bottom: 40px;
+  }
+
   .about,
   .work,
   .education,
@@ -227,6 +230,10 @@
 }
 
 @media (max-width: 420px) {
+  .hero-title {
+    left: 20px;
+  }
+
   .about,
   .work,
   .education,
