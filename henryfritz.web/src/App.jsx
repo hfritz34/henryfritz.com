@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './styles/Home.css';
 import HeroDayNight from './components/HeroDayNight';
+import ProjectVideo from './components/ProjectVideo';
 import prestigeScreenshot from './assets/prestige-landing-pic.png';
 import scratchScreenshot from './assets/scratch-screenshot.png';
 
@@ -133,7 +134,9 @@ function App() {
               key={project.name}
             >
               <div className="project-image">
-                {project.image ? (
+                {project.video ? (
+                  <ProjectVideo {...project.video} alt={`${project.name} gameplay`} />
+                ) : project.image ? (
                   <img src={project.image} alt={`${project.name} screenshot`} />
                 ) : (
                   'project screenshot'
