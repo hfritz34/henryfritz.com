@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './styles/Home.css';
-import HeroAsciiField from './components/HeroAsciiField';
+import HeroDayNight from './components/HeroDayNight';
 import prestigeScreenshot from './assets/prestige-landing-pic.png';
 import scratchScreenshot from './assets/scratch-screenshot.png';
 
@@ -35,7 +35,7 @@ function App() {
     const onScroll = () => {
       const f = Math.min(1, window.scrollY / 480);
       if (fieldRef.current) fieldRef.current.style.opacity = String(1 - f);
-      if (titleRef.current) titleRef.current.style.opacity = String(1 - f * 1.35);
+      if (titleRef.current) titleRef.current.style.opacity = String(Math.max(0, 1 - f * 1.35));
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -45,7 +45,7 @@ function App() {
     <div className="home">
       <section className="hero">
         <div ref={fieldRef} className="hero-field">
-          <HeroAsciiField />
+          <HeroDayNight />
         </div>
         <div ref={titleRef} className="hero-title">
           <h1>henry fritz</h1>
