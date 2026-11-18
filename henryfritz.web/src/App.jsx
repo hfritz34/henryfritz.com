@@ -116,14 +116,14 @@ function App() {
       </section>
 
       <section className="contact" id="contact">
-        <a href="mailto:henryfritz02@gmail.com">email</a>
+        <a href="mailto:henryfritz02@gmail.com">henryfritz02@gmail.com</a>
         <span className="dot">·</span>
         <a href="https://www.linkedin.com/in/henry-fritz000/" target="_blank" rel="noopener noreferrer">
-          linkedin
+          linkedin.com/in/henry-fritz000
         </a>
         <span className="dot">·</span>
         <a href="https://github.com/hfritz34" target="_blank" rel="noopener noreferrer">
-          github
+          github.com/hfritz34
         </a>
       </section>
     </div>
