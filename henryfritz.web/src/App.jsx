@@ -1,8 +1,28 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './styles/Home.css';
 import HeroDayNight from './components/HeroDayNight';
 import prestigeScreenshot from './assets/prestige-landing-pic.png';
 import scratchScreenshot from './assets/scratch-screenshot.png';
+
+const EMAIL = 'henryfritz02@gmail.com';
+
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    const el = document.createElement('textarea');
+    el.value = text;
+    el.setAttribute('readonly', '');
+    el.style.position = 'fixed';
+    el.style.opacity = '0';
+    document.body.appendChild(el);
+    el.select();
+    const ok = document.execCommand('copy');
+    el.remove();
+    return ok;
+  }
+}
 
 const WORK = [
   { name: 'Authentic', years: 'Present', href: 'https://authenticinsurance.com', current: true },
@@ -30,6 +50,17 @@ const PROJECTS = [
 function App() {
   const fieldRef = useRef(null);
   const titleRef = useRef(null);
+  const [toast, setToast] = useState(null);
+  const toastTimer = useRef(0);
+
+  const copyEmail = async () => {
+    const ok = await copyText(EMAIL);
+    setToast(ok ? `copied ${EMAIL}` : EMAIL);
+    clearTimeout(toastTimer.current);
+    toastTimer.current = setTimeout(() => setToast(null), 2200);
+  };
+
+  useEffect(() => () => clearTimeout(toastTimer.current), []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -116,16 +147,22 @@ function App() {
       </section>
 
       <section className="contact" id="contact">
-        <a href="mailto:henryfritz02@gmail.com">henryfritz02@gmail.com</a>
+        <button type="button" className="contact-link" onClick={copyEmail}>
+          email
+        </button>
         <span className="dot">·</span>
-        <a href="https://www.linkedin.com/in/henry-fritz000/" target="_blank" rel="noopener noreferrer">
-          linkedin.com/in/henry-fritz000
+        <a className="contact-link" href="https://www.linkedin.com/in/henry-fritz000/" target="_blank" rel="noopener noreferrer">
+          linkedin
         </a>
         <span className="dot">·</span>
-        <a href="https://github.com/hfritz34" target="_blank" rel="noopener noreferrer">
-          github.com/hfritz34
+        <a className="contact-link" href="https://github.com/hfritz34" target="_blank" rel="noopener noreferrer">
+          github
         </a>
       </section>
+
+      <div className={`toast${toast ? ' visible' : ''}`} role="status" aria-live="polite">
+        {toast}
+      </div>
     </div>
   );
 }
