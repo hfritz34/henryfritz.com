@@ -4,6 +4,9 @@ import HeroDayNight from './components/HeroDayNight';
 import ProjectVideo from './components/ProjectVideo';
 import prestigeScreenshot from './assets/prestige-landing-pic.png';
 import scratchScreenshot from './assets/scratch-screenshot.png';
+import celesteWebm from './assets/celeste-gameplay.webm';
+import celesteMp4 from './assets/celeste-gameplay.mp4';
+import celestePoster from './assets/celeste-poster.png';
 
 const EMAIL = 'henryfritz02@gmail.com';
 
@@ -45,6 +48,12 @@ const PROJECTS = [
     description: 'Webpage annotation extension',
     href: 'https://chromewebstore.google.com/detail/Scratch/gcibnldifnbniaijhnfeaedhbeedmghh',
     image: scratchScreenshot,
+  },
+  {
+    name: 'Celeste Clone',
+    description: 'C# / MonoGame platformer, team of 6',
+    href: 'https://github.com/hfritz34/celeste-clone',
+    video: { webm: celesteWebm, mp4: celesteMp4, poster: celestePoster },
   },
 ];
 
