@@ -38,6 +38,12 @@ const WORK = [
 
 const PROJECTS = [
   {
+    name: 'Celeste Clone',
+    description: 'C# / MonoGame platformer',
+    href: 'https://github.com/hfritz34/celeste-clone',
+    video: { webm: celesteWebm, mp4: celesteMp4, poster: celestePoster },
+  },
+  {
     name: 'Prestige',
     description: 'Music social network',
     href: 'https://www.prestigedmusic.com/',
@@ -48,12 +54,6 @@ const PROJECTS = [
     description: 'Webpage annotation extension',
     href: 'https://chromewebstore.google.com/detail/Scratch/gcibnldifnbniaijhnfeaedhbeedmghh',
     image: scratchScreenshot,
-  },
-  {
-    name: 'Celeste Clone',
-    description: 'C# / MonoGame platformer, team of 6',
-    href: 'https://github.com/hfritz34/celeste-clone',
-    video: { webm: celesteWebm, mp4: celesteMp4, poster: celestePoster },
   },
 ];
 
