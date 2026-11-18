@@ -1,4 +1,4 @@
-// HeroDayNight — production React component for the henryfritz.com hero (option 8a).
+// HeroDayNight — production React component for the henryfritz.com hero (option 9a: gentle-slope bank, 90s cycle).
 // Procedural ASCII landscape on a 60s day → sunset → night → dawn cycle.
 // Engine code below is extracted verbatim from the approved prototype; only the React wrapper is new.
 import { useEffect, useRef } from 'react';
@@ -63,9 +63,10 @@ function grid(w, h, C) {
     };
   }
 
-const setupCycle = ({ w, h, mouse, g }) => {
+const setupCycleWith = (opts = {}) => ({ w, h, mouse, g }) => {
+    const lay = opts.layout || 'orig';
     const C = g.C, cols = g.cols, rows = g.rows, n = cols * rows, noise = perlinFactory();
-    const HR = Math.round(rows * 0.58), HY = HR * C, CYCLE = 60;
+    const HR = Math.round(rows * 0.58), HY = HR * C, CYCLE = opts.cycle || 60;
     const B4 = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
     const hx = s => [parseInt(s.slice(1, 3), 16), parseInt(s.slice(3, 5), 16), parseInt(s.slice(5, 7), 16)];
     const conv = o => { const r = {}; for (const k in o) { const v = o[k]; r[k] = typeof v === 'number' ? v : Array.isArray(v) ? v.map(hx) : hx(v); } return r; };
@@ -75,7 +76,7 @@ const setupCycle = ({ w, h, mouse, g }) => {
     const SET = conv({ sky: ['#24185a', '#4e2484', '#9c3488', '#e0506a', '#ff8648', '#ffc458'], cl: '#ffb070', cs: '#7a3678', cr: '#ffe49a', fl: '#d0587e', fs: '#5c2a6a', sn: '#ffc6a2', ml: '#7e3a6c', ms: '#3e1d50', nl: '#4c2a54', ns: '#26163a', gr: ['#2a1c3a', '#4a343a', '#7a5a2c', '#d0903a'], ed: '#ffbc5a', wa: '#7a3a8a', su: '#ffd27a', L: 0.55, N: 0.15 });
     const NIG = conv({ sky: ['#04071c', '#09102e', '#0e1944', '#15235a', '#1e3172', '#2a428e'], cl: '#46589a', cs: '#1c2454', cr: '#9cacea', fl: '#3c52a6', fs: '#1c2766', sn: '#cad6ff', ml: '#22306e', ms: '#131b46', nl: '#15224e', ns: '#0b1332', gr: ['#0a2828', '#103a36', '#18584a', '#2c8c6c'], ed: '#62d4a4', wa: '#122260', su: '#f4ecd0', L: 0, N: 1 });
     const DAWN = conv({ sky: ['#1c2a6a', '#483a8a', '#8a5aa8', '#d27aa8', '#f6a8a0', '#ffd8b0'], cl: '#ffd2c2', cs: '#8a6aa8', cr: '#fff0d8', fl: '#d494b4', fs: '#7a5a9a', sn: '#ffe8f0', ml: '#6a5a9a', ms: '#40386a', nl: '#3a5a6a', ns: '#243a4a', gr: ['#1e4a3a', '#2e6a48', '#5a9a5a', '#aad28a'], ed: '#daf2aa', wa: '#6a6ab0', su: '#ffe0b0', L: 0.5, N: 0.3 });
-    const KF = [[0, DAY], [0.22, DAY], [0.34, SET], [0.46, NIG], [0.8, NIG], [0.9, DAWN], [1, DAY]];
+    const KF = opts.slow ? [[0, DAY], [0.17, DAY], [0.34, SET], [0.5, NIG], [0.74, NIG], [0.9, DAWN], [1, DAY]] : [[0, DAY], [0.22, DAY], [0.34, SET], [0.46, NIG], [0.8, NIG], [0.9, DAWN], [1, DAY]];
     const palAt = ph => {
       let k = 0; while (k < KF.length - 2 && ph >= KF[k + 1][0]) k++;
       const [p0, A] = KF[k], [p1, B] = KF[k + 1];
@@ -101,13 +102,20 @@ const setupCycle = ({ w, h, mouse, g }) => {
       hn[cx] = HR - (1 + Math.pow(noise(cx * 0.07 + 9, 6.3), 1.5) * 9);
     }
     const ridge = (hh, cx) => { const a = hh[Math.max(0, cx - 1)], b = hh[Math.min(cols - 1, cx + 1)], s = b - a; if (hh[cx] < a && hh[cx] < b) return '^'; return s < -0.7 ? '/' : s > 0.7 ? '\\' : '_'; };
-    const bankTop = cx => rows * 0.8 - Math.max(0, 1 - Math.pow((cx / cols - 0.8) / 0.25, 2)) * rows * 0.11;
+    const ss = (a, b, x) => { const u = Math.max(0, Math.min(1, (x - a) / (b - a))); return u * u * (3 - 2 * u); };
+    const bankTop = cx => {
+      const x = cx / cols;
+      if (lay === 'slope') return rows - rows * 0.3 * ss(0.4, 0.9, x) + (noise(cx * 0.09, 3.3) - 0.5) * 2.4 * ss(0.4, 0.9, x);
+      if (lay === 'rolling') return rows * 0.97 - rows * 0.17 * Math.exp(-Math.pow((x - 0.84) / 0.17, 2)) - rows * 0.06 * Math.exp(-Math.pow((x - 0.5) / 0.13, 2));
+      if (lay === 'none') return Infinity;
+      return rows * 0.8 - Math.max(0, 1 - Math.pow((x - 0.8) / 0.25, 2)) * rows * 0.11;
+    };
     const kind = new Uint8Array(n), band = new Uint8Array(n), edge = new Uint8Array(n), star = new Uint8Array(n), ph = new Float32Array(n), flower = new Int8Array(n).fill(-1);
     for (let cy = 0; cy < rows; cy++) for (let cx = 0; cx < cols; cx++) {
       const i = cy * cols + cx; ph[i] = Math.random() * 6.28;
       if (cy < HR) { if (Math.random() < 0.028) star[i] = 1 + ((Math.random() * 3) | 0); continue; }
       const bt = bankTop(cx);
-      if (cx / cols > 0.54 && cy >= bt) { kind[i] = 5; band[i] = Math.max(0, 3 - Math.floor((cy - bt) / 2)); if (cy === Math.ceil(bt)) edge[i] = 1; if (Math.random() < 0.06 && cy > bt + 1) flower[i] = (Math.random() * 4) | 0; continue; }
+      if ((lay !== 'orig' || cx / cols > 0.54) && cy >= bt) { kind[i] = 5; band[i] = Math.max(0, 3 - Math.floor((cy - bt) / 2)); if (cy === Math.ceil(bt)) edge[i] = 1; if (Math.random() < 0.06 && cy > bt + 1) flower[i] = (Math.random() * 4) | 0; continue; }
       const v = cy - HR + 1, depth = v / (rows - HR);
       const nn = noise(cx * (0.055 - depth * 0.035) + 3, Math.log(v + 1) * 2.6 + 7);
       const thr = 0.44 + depth * 0.1 - (v < 3 ? 0.35 : 0);
@@ -311,7 +319,7 @@ const setupCycle = ({ w, h, mouse, g }) => {
         g.put(px, py, ch, col, a, true);
       }
       if (NI > 0.3) for (const fy of flies) { fy.vx += (Math.random() - 0.5) * 0.08; fy.vy += (Math.random() - 0.5) * 0.08; fy.vx *= 0.96; fy.vy *= 0.96; fy.x += fy.vx; fy.y += fy.vy; if (fy.y < HY + 8) fy.vy += 0.05; if (fy.x < 0) fy.x = w; if (fy.x > w) fy.x = 0; if (fy.y > h) fy.y = HY + 10; const b = Math.sin(t * 2.2 + fy.p); if (b > 0.2) g.put(fy.x, fy.y, b > 0.75 ? '*' : '·', '#e8ff7a', (0.4 + b * 0.6) * NI, true); }
-      { const T = TREE, trunk = S(mx3(hx('#5a3a2a'), DARK, NI * 0.6));
+      if (lay !== 'none') { const T = TREE, trunk = S(mx3(hx('#5a3a2a'), DARK, NI * 0.6));
         for (let r = 0; r < 3; r++) g.put(T.cx * C, (T.cy - 1 - r) * C, '|', trunk, 0.95, true);
         const R = 4.2, ccy = T.cy - 3 - R;
         for (let dy = -R; dy <= R; dy++) for (let dx = -R * 1.2; dx <= R * 1.2; dx++) {
@@ -323,6 +331,7 @@ const setupCycle = ({ w, h, mouse, g }) => {
       drawFx(t, HY, 99999);
     };
   };
+const setupCycle = setupCycleWith({ layout: 'slope', cycle: 90, slow: true });
 
 /**
  * Props
